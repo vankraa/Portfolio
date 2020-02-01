@@ -4,11 +4,11 @@ A game made in elm is linked to a django server app in order to save scores, pro
 Once the user signs up to the server, they will have access to their own stats. If the username and password
 form is not filled the app will continue in offline mode and no progress will be saved upon exiting the game.
 
-The game is hosted on https://mac1xa3.ca/u/vankraa/Project03/ZomZom/project03.html
+The game is hosted on https://mac1xa3.ca/u/vankraa/Project03/ZomZoms/project03.html
 
 The server root url is https://mac1xa3.ca/e/vankraa/zomdataapp/ including all the urls in the app folder
 
-## ZomZom Game
+## ZomZoms Game
 -----
 
 -----
@@ -70,7 +70,7 @@ joke | (String,String) | 2-line message that displays whenever the user has not 
 -----
 ### **Views**
 
-ZomZom makes use of a **Phase** type with in order to change between different views. The phase type also controls which functions to change variables and respond to command and subscription messages.
+ZomZoms makes use of a **Phase** type with in order to change between different views. The phase type also controls which functions to change variables and respond to command and subscription messages.
 ```elm
 type Phase
     = Title
