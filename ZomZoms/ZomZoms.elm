@@ -1,4 +1,4 @@
-module ZomZom exposing (..)
+module ZomZoms exposing (..)
 import Browser
 import Browser.Events as BEvents exposing (onClick)
 import Browser.Navigation exposing (Key(..))

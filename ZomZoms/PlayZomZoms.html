@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ZomZom</title>
+  <title>ZomZoms</title>
   <style>body { padding: 0; margin: 0; }</style>
 </head>
 
@@ -4582,14 +4582,14 @@ var _Bitwise_shiftRightZfBy = F2(function(offset, a)
 {
 	return a >>> offset;
 });
-var $author$project$ZomZom$MakeRequest = function (a) {
+var $author$project$ZomZoms$MakeRequest = function (a) {
 	return {$: 'MakeRequest', a: a};
 };
-var $author$project$ZomZom$Tick = F2(
+var $author$project$ZomZoms$Tick = F2(
 	function (a, b) {
 		return {$: 'Tick', a: a, b: b};
 	});
-var $author$project$ZomZom$UrlChange = function (a) {
+var $author$project$ZomZoms$UrlChange = function (a) {
 	return {$: 'UrlChange', a: a};
 };
 var $elm$core$List$cons = _List_cons;
@@ -8790,18 +8790,18 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$App$appWithTick = F2(
 				}
 			});
 	});
-var $author$project$ZomZom$Start = {$: 'Start'};
-var $author$project$ZomZom$hScoreList = {d1: 0, d10: 0, d2: 0, d3: 0, d4: 0, d5: 0, d6: 0, d7: 0, d8: 0, d9: 0, n1: '', n10: '', n2: '', n3: '', n4: '', n5: '', n6: '', n7: '', n8: '', n9: '', s1: 0, s10: 0, s2: 0, s3: 0, s4: 0, s5: 0, s6: 0, s7: 0, s8: 0, s9: 0};
-var $author$project$ZomZom$armorStat = {click: false, cost: 20, progress: 0, value: 100};
-var $author$project$ZomZom$damageStat = {click: false, cost: 20, progress: 0, value: 5};
-var $author$project$ZomZom$fireRateStat = {click: false, cost: 20, progress: 0, value: 1 / 3};
-var $author$project$ZomZom$healthRegenStat = {click: false, cost: 20, progress: 0, value: 0};
-var $author$project$ZomZom$muzzleVStat = {click: false, cost: 20, progress: 0, value: 10};
-var $author$project$ZomZom$penetrationStat = {click: false, cost: 20, progress: 0, value: 1};
-var $author$project$ZomZom$speedStat = {click: false, cost: 20, progress: 0, value: 3};
-var $author$project$ZomZom$spreadStat = {click: false, cost: 20, progress: 0, value: 1};
-var $author$project$ZomZom$statsUpgrades = {armor: $author$project$ZomZom$armorStat, damage: $author$project$ZomZom$damageStat, fireRate: $author$project$ZomZom$fireRateStat, healthRegen: $author$project$ZomZom$healthRegenStat, muzzleV: $author$project$ZomZom$muzzleVStat, penetration: $author$project$ZomZom$penetrationStat, speed: $author$project$ZomZom$speedStat, spread: $author$project$ZomZom$spreadStat};
-var $author$project$ZomZom$init = F3(
+var $author$project$ZomZoms$Start = {$: 'Start'};
+var $author$project$ZomZoms$hScoreList = {d1: 0, d10: 0, d2: 0, d3: 0, d4: 0, d5: 0, d6: 0, d7: 0, d8: 0, d9: 0, n1: '', n10: '', n2: '', n3: '', n4: '', n5: '', n6: '', n7: '', n8: '', n9: '', s1: 0, s10: 0, s2: 0, s3: 0, s4: 0, s5: 0, s6: 0, s7: 0, s8: 0, s9: 0};
+var $author$project$ZomZoms$armorStat = {click: false, cost: 20, progress: 0, value: 100};
+var $author$project$ZomZoms$damageStat = {click: false, cost: 20, progress: 0, value: 5};
+var $author$project$ZomZoms$fireRateStat = {click: false, cost: 20, progress: 0, value: 1 / 3};
+var $author$project$ZomZoms$healthRegenStat = {click: false, cost: 20, progress: 0, value: 0};
+var $author$project$ZomZoms$muzzleVStat = {click: false, cost: 20, progress: 0, value: 10};
+var $author$project$ZomZoms$penetrationStat = {click: false, cost: 20, progress: 0, value: 1};
+var $author$project$ZomZoms$speedStat = {click: false, cost: 20, progress: 0, value: 3};
+var $author$project$ZomZoms$spreadStat = {click: false, cost: 20, progress: 0, value: 1};
+var $author$project$ZomZoms$statsUpgrades = {armor: $author$project$ZomZoms$armorStat, damage: $author$project$ZomZoms$damageStat, fireRate: $author$project$ZomZoms$fireRateStat, healthRegen: $author$project$ZomZoms$healthRegenStat, muzzleV: $author$project$ZomZoms$muzzleVStat, penetration: $author$project$ZomZoms$penetrationStat, speed: $author$project$ZomZoms$speedStat, spread: $author$project$ZomZoms$spreadStat};
+var $author$project$ZomZoms$init = F3(
 	function (flags, url, key) {
 		var model = {
 			army: _List_Nil,
@@ -8811,7 +8811,7 @@ var $author$project$ZomZom$init = F3(
 			day: 0,
 			fireRate: 1 / 3,
 			gun: _List_Nil,
-			hScores: $author$project$ZomZom$hScoreList,
+			hScores: $author$project$ZomZoms$hScoreList,
 			healthRegen: 0,
 			heroDir: 0,
 			heroHp: 100,
@@ -8827,7 +8827,7 @@ var $author$project$ZomZom$init = F3(
 			pass: '',
 			pass2: '',
 			penetration: 1,
-			phase: $author$project$ZomZom$Start,
+			phase: $author$project$ZomZoms$Start,
 			poorBoy: 3,
 			qPress: false,
 			reload: 0,
@@ -8836,19 +8836,19 @@ var $author$project$ZomZom$init = F3(
 			spawn: false,
 			spread: 1,
 			timer: 0,
-			upgrades: $author$project$ZomZom$statsUpgrades,
+			upgrades: $author$project$ZomZoms$statsUpgrades,
 			userInfo: {cash: 20, day: 0, score: 0}
 		};
 		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 	});
-var $author$project$ZomZom$MouseDown = function (a) {
+var $author$project$ZomZoms$MouseDown = function (a) {
 	return {$: 'MouseDown', a: a};
 };
-var $author$project$ZomZom$MouseUp = {$: 'MouseUp'};
-var $author$project$ZomZom$Shoot = function (a) {
+var $author$project$ZomZoms$MouseUp = {$: 'MouseUp'};
+var $author$project$ZomZoms$Shoot = function (a) {
 	return {$: 'Shoot', a: a};
 };
-var $author$project$ZomZom$Tock = function (a) {
+var $author$project$ZomZoms$Tock = function (a) {
 	return {$: 'Tock', a: a};
 };
 var $elm$time$Time$Every = F2(
@@ -9018,36 +9018,36 @@ var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
 var $elm$browser$Browser$Events$onClick = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'click');
 var $elm$browser$Browser$Events$onMouseDown = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'mousedown');
 var $elm$browser$Browser$Events$onMouseUp = A2($elm$browser$Browser$Events$on, $elm$browser$Browser$Events$Document, 'mouseup');
-var $author$project$ZomZom$subscriptions = function (model) {
+var $author$project$ZomZoms$subscriptions = function (model) {
 	return $elm$core$Platform$Sub$batch(
 		_List_fromArray(
 			[
-				_Utils_eq(model.phase, $author$project$ZomZom$Start) ? $elm$browser$Browser$Events$onClick(
+				_Utils_eq(model.phase, $author$project$ZomZoms$Start) ? $elm$browser$Browser$Events$onClick(
 				$elm$json$Json$Decode$succeed(
-					$author$project$ZomZom$Shoot(
+					$author$project$ZomZoms$Shoot(
 						$elm$time$Time$millisToPosix(1)))) : $elm$core$Platform$Sub$none,
-				_Utils_eq(model.phase, $author$project$ZomZom$Start) ? $elm$browser$Browser$Events$onMouseDown(
+				_Utils_eq(model.phase, $author$project$ZomZoms$Start) ? $elm$browser$Browser$Events$onMouseDown(
 				$elm$json$Json$Decode$succeed(
-					$author$project$ZomZom$MouseDown('hold'))) : $elm$core$Platform$Sub$none,
+					$author$project$ZomZoms$MouseDown('hold'))) : $elm$core$Platform$Sub$none,
 				$elm$browser$Browser$Events$onMouseUp(
-				$elm$json$Json$Decode$succeed($author$project$ZomZom$MouseUp)),
-				(_Utils_eq(model.phase, $author$project$ZomZom$Start) && model.hold) ? A2($elm$time$Time$every, 2750 * model.fireRate, $author$project$ZomZom$Shoot) : $elm$core$Platform$Sub$none,
-				_Utils_eq(model.phase, $author$project$ZomZom$Start) ? A2($elm$time$Time$every, 1000, $author$project$ZomZom$Tock) : $elm$core$Platform$Sub$none
+				$elm$json$Json$Decode$succeed($author$project$ZomZoms$MouseUp)),
+				(_Utils_eq(model.phase, $author$project$ZomZoms$Start) && model.hold) ? A2($elm$time$Time$every, 2750 * model.fireRate, $author$project$ZomZoms$Shoot) : $elm$core$Platform$Sub$none,
+				_Utils_eq(model.phase, $author$project$ZomZoms$Start) ? A2($elm$time$Time$every, 1000, $author$project$ZomZoms$Tock) : $elm$core$Platform$Sub$none
 			]));
 };
-var $author$project$ZomZom$Death = {$: 'Death'};
-var $author$project$ZomZom$Joke = function (a) {
+var $author$project$ZomZoms$Death = {$: 'Death'};
+var $author$project$ZomZoms$Joke = function (a) {
 	return {$: 'Joke', a: a};
 };
-var $author$project$ZomZom$Login = {$: 'Login'};
-var $author$project$ZomZom$NewZombie = function (a) {
+var $author$project$ZomZoms$Login = {$: 'Login'};
+var $author$project$ZomZoms$NewZombie = function (a) {
 	return {$: 'NewZombie', a: a};
 };
-var $author$project$ZomZom$Save = {$: 'Save'};
-var $author$project$ZomZom$Scoreboard = {$: 'Scoreboard'};
-var $author$project$ZomZom$Shop = {$: 'Shop'};
-var $author$project$ZomZom$Title = {$: 'Title'};
-var $author$project$ZomZom$GotResponse = function (a) {
+var $author$project$ZomZoms$Save = {$: 'Save'};
+var $author$project$ZomZoms$Scoreboard = {$: 'Scoreboard'};
+var $author$project$ZomZoms$Shop = {$: 'Shop'};
+var $author$project$ZomZoms$Title = {$: 'Title'};
+var $author$project$ZomZoms$GotResponse = function (a) {
 	return {$: 'GotResponse', a: a};
 };
 var $elm$json$Json$Encode$object = function (pairs) {
@@ -9064,7 +9064,7 @@ var $elm$json$Json$Encode$object = function (pairs) {
 			pairs));
 };
 var $elm$json$Json$Encode$string = _Json_wrap;
-var $author$project$ZomZom$encodeUser = F2(
+var $author$project$ZomZoms$encodeUser = F2(
 	function (name, pass) {
 		return $elm$json$Json$Encode$object(
 			_List_fromArray(
@@ -9698,26 +9698,26 @@ var $elm$http$Http$post = function (r) {
 	return $elm$http$Http$request(
 		{body: r.body, expect: r.expect, headers: _List_Nil, method: 'POST', timeout: $elm$core$Maybe$Nothing, tracker: $elm$core$Maybe$Nothing, url: r.url});
 };
-var $author$project$ZomZom$rootUrl = 'https://mac1xa3.ca/e/vankraa/';
-var $author$project$ZomZom$addUser = F2(
+var $author$project$ZomZoms$rootUrl = 'https://mac1xa3.ca/e/vankraa/';
+var $author$project$ZomZoms$addUser = F2(
 	function (name, pass) {
 		return $elm$http$Http$post(
 			{
 				body: $elm$http$Http$jsonBody(
-					A2($author$project$ZomZom$encodeUser, name, pass)),
-				expect: $elm$http$Http$expectString($author$project$ZomZom$GotResponse),
-				url: $author$project$ZomZom$rootUrl + 'zomdataapp/add_user/'
+					A2($author$project$ZomZoms$encodeUser, name, pass)),
+				expect: $elm$http$Http$expectString($author$project$ZomZoms$GotResponse),
+				url: $author$project$ZomZoms$rootUrl + 'zomdataapp/add_user/'
 			});
 	});
 var $elm$core$Basics$atan2 = _Basics_atan2;
-var $author$project$ZomZom$attemptLogin = F2(
+var $author$project$ZomZoms$attemptLogin = F2(
 	function (name, pass) {
 		return $elm$http$Http$post(
 			{
 				body: $elm$http$Http$jsonBody(
-					A2($author$project$ZomZom$encodeUser, name, pass)),
-				expect: $elm$http$Http$expectString($author$project$ZomZom$GotResponse),
-				url: $author$project$ZomZom$rootUrl + 'zomdataapp/attempt_login/'
+					A2($author$project$ZomZoms$encodeUser, name, pass)),
+				expect: $elm$http$Http$expectString($author$project$ZomZoms$GotResponse),
+				url: $author$project$ZomZoms$rootUrl + 'zomdataapp/attempt_login/'
 			});
 	});
 var $elm$core$Basics$clamp = F3(
@@ -9786,15 +9786,15 @@ var $elm$random$Random$map3 = F4(
 					seed3);
 			});
 	});
-var $author$project$ZomZom$xBoundry = F2(
+var $author$project$ZomZoms$xBoundry = F2(
 	function (h, r) {
 		return ((h + r) > 905) ? 905 : ((_Utils_cmp(h + r, -905) < 0) ? (-905) : (h + r));
 	});
-var $author$project$ZomZom$yBoundry = F2(
+var $author$project$ZomZoms$yBoundry = F2(
 	function (h, r) {
 		return ((h + r) > 475) ? 475 : ((_Utils_cmp(h + r, -535) < 0) ? (-535) : (h + r));
 	});
-var $author$project$ZomZom$bossZombieGen = function (model) {
+var $author$project$ZomZoms$bossZombieGen = function (model) {
 	return A4(
 		$elm$random$Random$map3,
 		F3(
@@ -9815,12 +9815,12 @@ var $author$project$ZomZom$bossZombieGen = function (model) {
 			}),
 		A2(
 			$elm$random$Random$float,
-			A2($author$project$ZomZom$xBoundry, model.heroX, -800),
-			A2($author$project$ZomZom$xBoundry, model.heroX, 800)),
+			A2($author$project$ZomZoms$xBoundry, model.heroX, -800),
+			A2($author$project$ZomZoms$xBoundry, model.heroX, 800)),
 		A2(
 			$elm$random$Random$float,
-			A2($author$project$ZomZom$yBoundry, model.heroY, -800),
-			A2($author$project$ZomZom$yBoundry, model.heroY, 800)),
+			A2($author$project$ZomZoms$yBoundry, model.heroY, -800),
+			A2($author$project$ZomZoms$yBoundry, model.heroY, 800)),
 		A2($elm$random$Random$float, 1, 2));
 };
 var $elm$core$Basics$ge = _Utils_ge;
@@ -9832,7 +9832,7 @@ var $elm$core$Tuple$mapBoth = F3(
 			funcA(x),
 			funcB(y));
 	});
-var $author$project$ZomZom$canBuy = F3(
+var $author$project$ZomZoms$canBuy = F3(
 	function (cash, cost, progress) {
 		return A3(
 			$elm$core$Tuple$mapBoth,
@@ -9853,7 +9853,7 @@ var $elm$core$List$member = F2(
 			},
 			xs);
 	});
-var $author$project$ZomZom$bOneHit = F2(
+var $author$project$ZomZoms$bOneHit = F2(
 	function (z, b) {
 		var zombie = z.b;
 		var zNum = z.a;
@@ -9903,7 +9903,7 @@ var $elm$core$List$unzip = function (pairs) {
 		_Utils_Tuple2(_List_Nil, _List_Nil),
 		pairs);
 };
-var $author$project$ZomZom$zOneHit = F2(
+var $author$project$ZomZoms$zOneHit = F2(
 	function (b, z) {
 		var zombie = z.b;
 		var zNum = z.a;
@@ -9918,13 +9918,13 @@ var $author$project$ZomZom$zOneHit = F2(
 				zombie,
 				{hp: zHits.a, isHit: zHits.b}));
 	});
-var $author$project$ZomZom$collisions = F2(
+var $author$project$ZomZoms$collisions = F2(
 	function (gun, army) {
 		var iZombie = A2($elm$core$List$indexedMap, $elm$core$Tuple$pair, army);
 		var zHurt = A2(
 			$elm$core$List$map,
 			function (z) {
-				return A3($elm$core$List$foldl, $author$project$ZomZom$zOneHit, z, gun);
+				return A3($elm$core$List$foldl, $author$project$ZomZoms$zOneHit, z, gun);
 			},
 			iZombie);
 		var newArmy = $elm$core$List$unzip(zHurt).b;
@@ -9952,7 +9952,7 @@ var $author$project$ZomZom$collisions = F2(
 		var bPen = A2(
 			$elm$core$List$map,
 			function (b) {
-				return A3($elm$core$List$foldl, $author$project$ZomZom$bOneHit, b, iZombie);
+				return A3($elm$core$List$foldl, $author$project$ZomZoms$bOneHit, b, iZombie);
 			},
 			gun);
 		var bStop = A2(
@@ -9972,7 +9972,7 @@ var $elm$random$Random$constant = function (value) {
 		});
 };
 var $elm$core$Basics$pi = _Basics_pi;
-var $author$project$ZomZom$angle = F2(
+var $author$project$ZomZoms$angle = F2(
 	function (a, b) {
 		return (a === 1) ? A2(
 			$elm$core$List$map,
@@ -10015,13 +10015,13 @@ var $elm$core$List$append = F2(
 var $elm$core$List$concat = function (lists) {
 	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
 };
-var $author$project$ZomZom$makeBullet = function (model) {
+var $author$project$ZomZoms$makeBullet = function (model) {
 	var stats = model.upgrades;
 	var dmg = stats.damage;
 	return {dir: model.heroDir, dmg: model.damage, hitList: _List_Nil, penetration: model.penetration, size: 3 + (dmg.progress * 5), speed: model.muzzleV, x: model.heroX, y: model.heroY};
 };
-var $author$project$ZomZom$fire = function (model) {
-	var bullet = $author$project$ZomZom$makeBullet(model);
+var $author$project$ZomZoms$fire = function (model) {
+	var bullet = $author$project$ZomZoms$makeBullet(model);
 	var _v0 = model.spread;
 	switch (_v0) {
 		case 1:
@@ -10032,12 +10032,12 @@ var $author$project$ZomZom$fire = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						_List_fromArray(
 							[bullet]))
@@ -10049,12 +10049,12 @@ var $author$project$ZomZom$fire = function (model) {
 						_List_fromArray(
 						[bullet]),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						_List_fromArray(
 							[bullet]))
@@ -10064,28 +10064,28 @@ var $author$project$ZomZom$fire = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet])))
@@ -10097,28 +10097,28 @@ var $author$project$ZomZom$fire = function (model) {
 						_List_fromArray(
 						[bullet]),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet])))
@@ -10128,50 +10128,50 @@ var $author$project$ZomZom$fire = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet]))))
@@ -10183,50 +10183,50 @@ var $author$project$ZomZom$fire = function (model) {
 						_List_fromArray(
 						[bullet]),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet]))))
@@ -10236,78 +10236,78 @@ var $author$project$ZomZom$fire = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									_List_fromArray(
 										[bullet])))))
@@ -10319,78 +10319,78 @@ var $author$project$ZomZom$fire = function (model) {
 						_List_fromArray(
 						[bullet]),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									_List_fromArray(
 										[bullet])))))
@@ -10400,112 +10400,112 @@ var $author$project$ZomZom$fire = function (model) {
 				_List_fromArray(
 					[
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						3,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									A2(
-										$author$project$ZomZom$angle,
+										$author$project$ZomZoms$angle,
 										1,
 										_List_fromArray(
 											[bullet])))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						4,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									A2(
-										$author$project$ZomZom$angle,
+										$author$project$ZomZoms$angle,
 										2,
 										_List_fromArray(
 											[bullet]))))))
@@ -10517,112 +10517,112 @@ var $author$project$ZomZom$fire = function (model) {
 						_List_fromArray(
 						[bullet]),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						_List_fromArray(
 							[bullet])),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							_List_fromArray(
 								[bullet]))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								_List_fromArray(
 									[bullet])))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									_List_fromArray(
 										[bullet]))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						1,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							1,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								1,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									1,
 									A2(
-										$author$project$ZomZom$angle,
+										$author$project$ZomZoms$angle,
 										1,
 										_List_fromArray(
 											[bullet])))))),
 						A2(
-						$author$project$ZomZom$angle,
+						$author$project$ZomZoms$angle,
 						2,
 						A2(
-							$author$project$ZomZom$angle,
+							$author$project$ZomZoms$angle,
 							2,
 							A2(
-								$author$project$ZomZom$angle,
+								$author$project$ZomZoms$angle,
 								2,
 								A2(
-									$author$project$ZomZom$angle,
+									$author$project$ZomZoms$angle,
 									2,
 									A2(
-										$author$project$ZomZom$angle,
+										$author$project$ZomZoms$angle,
 										2,
 										_List_fromArray(
 											[bullet]))))))
@@ -10705,7 +10705,7 @@ var $elm$random$Random$generate = F2(
 			$elm$random$Random$Generate(
 				A2($elm$random$Random$map, tagger, generator)));
 	});
-var $author$project$ZomZom$JsonUser = function (a) {
+var $author$project$ZomZoms$JsonUser = function (a) {
 	return {$: 'JsonUser', a: a};
 };
 var $elm$json$Json$Decode$decodeString = _Json_runOnString;
@@ -10728,7 +10728,7 @@ var $elm$http$Http$get = function (r) {
 		{body: $elm$http$Http$emptyBody, expect: r.expect, headers: _List_Nil, method: 'GET', timeout: $elm$core$Maybe$Nothing, tracker: $elm$core$Maybe$Nothing, url: r.url});
 };
 var $elm$json$Json$Decode$map3 = _Json_map3;
-var $author$project$ZomZom$userDecoder = function (ui) {
+var $author$project$ZomZoms$userDecoder = function (ui) {
 	return A4(
 		$elm$json$Json$Decode$map3,
 		F3(
@@ -10741,28 +10741,28 @@ var $author$project$ZomZom$userDecoder = function (ui) {
 		A2($elm$json$Json$Decode$field, 'cash', $elm$json$Json$Decode$int),
 		A2($elm$json$Json$Decode$field, 'score', $elm$json$Json$Decode$int));
 };
-var $author$project$ZomZom$getScore = F3(
+var $author$project$ZomZoms$getScore = F3(
 	function (ui, name, pass) {
 		return $elm$http$Http$get(
 			{
 				expect: A2(
 					$elm$http$Http$expectJson,
-					$author$project$ZomZom$JsonUser,
-					$author$project$ZomZom$userDecoder(ui)),
-				url: $author$project$ZomZom$rootUrl + 'zomdataapp/get_score/'
+					$author$project$ZomZoms$JsonUser,
+					$author$project$ZomZoms$userDecoder(ui)),
+				url: $author$project$ZomZoms$rootUrl + 'zomdataapp/get_score/'
 			});
 	});
-var $author$project$ZomZom$JsonStats = function (a) {
+var $author$project$ZomZoms$JsonStats = function (a) {
 	return {$: 'JsonStats', a: a};
 };
-var $author$project$ZomZom$assignStats = F9(
+var $author$project$ZomZoms$assignStats = F9(
 	function (stats, v, a, d, m, f, s, p, h) {
 		return _Utils_update(
 			stats,
 			{armor: a, damage: d, fireRate: f, healthRegen: h, muzzleV: m, penetration: p, speed: v, spread: s});
 	});
 var $elm$json$Json$Decode$map8 = _Json_map8;
-var $author$project$ZomZom$upgradeDecoder = A4(
+var $author$project$ZomZoms$upgradeDecoder = A4(
 	$elm$json$Json$Decode$map3,
 	F3(
 		function (x, y, z) {
@@ -10771,31 +10771,31 @@ var $author$project$ZomZom$upgradeDecoder = A4(
 	A2($elm$json$Json$Decode$field, 'value', $elm$json$Json$Decode$float),
 	A2($elm$json$Json$Decode$field, 'progress', $elm$json$Json$Decode$float),
 	A2($elm$json$Json$Decode$field, 'cost', $elm$json$Json$Decode$int));
-var $author$project$ZomZom$statsDecoder = function (stats) {
+var $author$project$ZomZoms$statsDecoder = function (stats) {
 	return A9(
 		$elm$json$Json$Decode$map8,
-		$author$project$ZomZom$assignStats(stats),
-		A2($elm$json$Json$Decode$field, 'speed', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'armor', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'damage', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'muzzleV', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'fireRate', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'spread', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'penetration', $author$project$ZomZom$upgradeDecoder),
-		A2($elm$json$Json$Decode$field, 'healthRegen', $author$project$ZomZom$upgradeDecoder));
+		$author$project$ZomZoms$assignStats(stats),
+		A2($elm$json$Json$Decode$field, 'speed', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'armor', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'damage', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'muzzleV', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'fireRate', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'spread', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'penetration', $author$project$ZomZoms$upgradeDecoder),
+		A2($elm$json$Json$Decode$field, 'healthRegen', $author$project$ZomZoms$upgradeDecoder));
 };
-var $author$project$ZomZom$getStats = F3(
+var $author$project$ZomZoms$getStats = F3(
 	function (stats, name, pass) {
 		return $elm$http$Http$get(
 			{
 				expect: A2(
 					$elm$http$Http$expectJson,
-					$author$project$ZomZom$JsonStats,
-					$author$project$ZomZom$statsDecoder(stats)),
-				url: $author$project$ZomZom$rootUrl + 'zomdataapp/get_stats/'
+					$author$project$ZomZoms$JsonStats,
+					$author$project$ZomZoms$statsDecoder(stats)),
+				url: $author$project$ZomZoms$rootUrl + 'zomdataapp/get_stats/'
 			});
 	});
-var $author$project$ZomZom$handleError = function (error) {
+var $author$project$ZomZoms$handleError = function (error) {
 	switch (error.$) {
 		case 'BadUrl':
 			var url = error.a;
@@ -10844,13 +10844,13 @@ var $elm$random$Random$int = F2(
 				}
 			});
 	});
-var $author$project$ZomZom$logOut = $elm$http$Http$get(
+var $author$project$ZomZoms$logOut = $elm$http$Http$get(
 	{
-		expect: $elm$http$Http$expectString($author$project$ZomZom$GotResponse),
-		url: $author$project$ZomZom$rootUrl + 'zomdataapp/log_out/'
+		expect: $elm$http$Http$expectString($author$project$ZomZoms$GotResponse),
+		url: $author$project$ZomZoms$rootUrl + 'zomdataapp/log_out/'
 	});
 var $elm$core$Basics$neq = _Utils_notEqual;
-var $author$project$ZomZom$nomNom = F2(
+var $author$project$ZomZoms$nomNom = F2(
 	function (model, zombie) {
 		return ((_Utils_cmp(
 			$elm$core$Basics$abs(model.heroX - zombie.x),
@@ -10858,7 +10858,7 @@ var $author$project$ZomZom$nomNom = F2(
 			$elm$core$Basics$abs(model.heroY - zombie.y),
 			zombie.size + 25) < 0)) ? true : false;
 	});
-var $author$project$ZomZom$nom = F2(
+var $author$project$ZomZoms$nom = F2(
 	function (model, army) {
 		return A3(
 			$elm$core$List$foldl,
@@ -10871,11 +10871,11 @@ var $author$project$ZomZom$nom = F2(
 				},
 				A2(
 					$elm$core$List$filter,
-					$author$project$ZomZom$nomNom(model),
+					$author$project$ZomZoms$nomNom(model),
 					army)));
 	});
 var $elm$json$Json$Encode$int = _Json_wrap;
-var $author$project$ZomZom$encodeScore = function (ui) {
+var $author$project$ZomZoms$encodeScore = function (ui) {
 	return $elm$json$Json$Encode$object(
 		_List_fromArray(
 			[
@@ -10890,17 +10890,17 @@ var $author$project$ZomZom$encodeScore = function (ui) {
 				$elm$json$Json$Encode$int(ui.cash))
 			]));
 };
-var $author$project$ZomZom$saveScore = function (ui) {
+var $author$project$ZomZoms$saveScore = function (ui) {
 	return $elm$http$Http$post(
 		{
 			body: $elm$http$Http$jsonBody(
-				$author$project$ZomZom$encodeScore(ui)),
-			expect: $elm$http$Http$expectString($author$project$ZomZom$GotResponse),
-			url: $author$project$ZomZom$rootUrl + 'zomdataapp/save_progress/'
+				$author$project$ZomZoms$encodeScore(ui)),
+			expect: $elm$http$Http$expectString($author$project$ZomZoms$GotResponse),
+			url: $author$project$ZomZoms$rootUrl + 'zomdataapp/save_progress/'
 		});
 };
 var $elm$json$Json$Encode$float = _Json_wrap;
-var $author$project$ZomZom$encodeOneStat = function (u) {
+var $author$project$ZomZoms$encodeOneStat = function (u) {
 	return $elm$json$Json$Encode$object(
 		_List_fromArray(
 			[
@@ -10915,46 +10915,46 @@ var $author$project$ZomZom$encodeOneStat = function (u) {
 				$elm$json$Json$Encode$int(u.cost))
 			]));
 };
-var $author$project$ZomZom$encodeStats = function (s) {
+var $author$project$ZomZoms$encodeStats = function (s) {
 	return $elm$json$Json$Encode$object(
 		_List_fromArray(
 			[
 				_Utils_Tuple2(
 				'speed',
-				$author$project$ZomZom$encodeOneStat(s.speed)),
+				$author$project$ZomZoms$encodeOneStat(s.speed)),
 				_Utils_Tuple2(
 				'armor',
-				$author$project$ZomZom$encodeOneStat(s.armor)),
+				$author$project$ZomZoms$encodeOneStat(s.armor)),
 				_Utils_Tuple2(
 				'damage',
-				$author$project$ZomZom$encodeOneStat(s.damage)),
+				$author$project$ZomZoms$encodeOneStat(s.damage)),
 				_Utils_Tuple2(
 				'muzzleV',
-				$author$project$ZomZom$encodeOneStat(s.muzzleV)),
+				$author$project$ZomZoms$encodeOneStat(s.muzzleV)),
 				_Utils_Tuple2(
 				'fireRate',
-				$author$project$ZomZom$encodeOneStat(s.fireRate)),
+				$author$project$ZomZoms$encodeOneStat(s.fireRate)),
 				_Utils_Tuple2(
 				'spread',
-				$author$project$ZomZom$encodeOneStat(s.spread)),
+				$author$project$ZomZoms$encodeOneStat(s.spread)),
 				_Utils_Tuple2(
 				'penetration',
-				$author$project$ZomZom$encodeOneStat(s.penetration)),
+				$author$project$ZomZoms$encodeOneStat(s.penetration)),
 				_Utils_Tuple2(
 				'healthRegen',
-				$author$project$ZomZom$encodeOneStat(s.healthRegen))
+				$author$project$ZomZoms$encodeOneStat(s.healthRegen))
 			]));
 };
-var $author$project$ZomZom$saveStats = function (stats) {
+var $author$project$ZomZoms$saveStats = function (stats) {
 	return $elm$http$Http$post(
 		{
 			body: $elm$http$Http$jsonBody(
-				$author$project$ZomZom$encodeStats(stats)),
-			expect: $elm$http$Http$expectString($author$project$ZomZom$GotResponse),
-			url: $author$project$ZomZom$rootUrl + 'zomdataapp/save_stats/'
+				$author$project$ZomZoms$encodeStats(stats)),
+			expect: $elm$http$Http$expectString($author$project$ZomZoms$GotResponse),
+			url: $author$project$ZomZoms$rootUrl + 'zomdataapp/save_stats/'
 		});
 };
-var $author$project$ZomZom$offScreen = function (gun) {
+var $author$project$ZomZoms$offScreen = function (gun) {
 	return A2(
 		$elm$core$List$filter,
 		function (b) {
@@ -10964,7 +10964,7 @@ var $author$project$ZomZom$offScreen = function (gun) {
 };
 var $elm$core$Basics$pow = _Basics_pow;
 var $elm$core$Basics$sqrt = _Basics_sqrt;
-var $author$project$ZomZom$trajectory = function (bullet) {
+var $author$project$ZomZoms$trajectory = function (bullet) {
 	var dy = $elm$core$Basics$sin(bullet.dir);
 	var dx = $elm$core$Basics$cos(bullet.dir);
 	var vx = ($elm$core$Basics$sqrt(
@@ -10977,13 +10977,13 @@ var $author$project$ZomZom$trajectory = function (bullet) {
 		bullet,
 		{x: bullet.x + (vx * bullet.speed), y: bullet.y + (vy * bullet.speed)});
 };
-var $author$project$ZomZom$shootGun = function (gun) {
+var $author$project$ZomZoms$shootGun = function (gun) {
 	return A2(
 		$elm$core$List$map,
-		$author$project$ZomZom$trajectory,
-		$author$project$ZomZom$offScreen(gun));
+		$author$project$ZomZoms$trajectory,
+		$author$project$ZomZoms$offScreen(gun));
 };
-var $author$project$ZomZom$updatePosition = F4(
+var $author$project$ZomZoms$updatePosition = F4(
 	function (x, y, feeding, zombie) {
 		var dy = y - zombie.y;
 		var dx = x - zombie.x;
@@ -11001,19 +11001,19 @@ var $author$project$ZomZom$updatePosition = F4(
 			{
 				dir: dir,
 				isHit: cool,
-				x: A2($author$project$ZomZom$xBoundry, zombie.x, vx * zombie.speed),
-				y: A2($author$project$ZomZom$yBoundry, zombie.y, vy * zombie.speed)
+				x: A2($author$project$ZomZoms$xBoundry, zombie.x, vx * zombie.speed),
+				y: A2($author$project$ZomZoms$yBoundry, zombie.y, vy * zombie.speed)
 			});
 	});
-var $author$project$ZomZom$updatePositions = F4(
+var $author$project$ZomZoms$updatePositions = F4(
 	function (x, y, feeding, army) {
 		return A2(
 			$elm$core$List$map,
-			A3($author$project$ZomZom$updatePosition, x, y, feeding),
+			A3($author$project$ZomZoms$updatePosition, x, y, feeding),
 			army);
 	});
-var $author$project$ZomZom$Died = {$: 'Died'};
-var $author$project$ZomZom$youDied = function (model) {
+var $author$project$ZomZoms$Died = {$: 'Died'};
+var $author$project$ZomZoms$youDied = function (model) {
 	return _Utils_update(
 		model,
 		{
@@ -11023,7 +11023,7 @@ var $author$project$ZomZom$youDied = function (model) {
 			day: 0,
 			fireRate: 1 / 3,
 			gun: _List_Nil,
-			hScores: $author$project$ZomZom$hScoreList,
+			hScores: $author$project$ZomZoms$hScoreList,
 			healthRegen: 0,
 			heroDir: 0,
 			heroHp: 100,
@@ -11035,7 +11035,7 @@ var $author$project$ZomZom$youDied = function (model) {
 			muzzleV: 10,
 			pPress: false,
 			penetration: 1,
-			phase: $author$project$ZomZom$Died,
+			phase: $author$project$ZomZoms$Died,
 			poorBoy: 3,
 			qPress: false,
 			reload: 0,
@@ -11044,12 +11044,12 @@ var $author$project$ZomZom$youDied = function (model) {
 			spawn: false,
 			spread: 1,
 			timer: 0,
-			upgrades: $author$project$ZomZom$statsUpgrades,
+			upgrades: $author$project$ZomZoms$statsUpgrades,
 			userInfo: {cash: 20, day: 0, score: 0}
 		});
 };
 var $MacCASOutreach$graphicsvg$GraphicSVG$green = A4($MacCASOutreach$graphicsvg$GraphicSVG$RGBA, 115, 210, 22, 1);
-var $author$project$ZomZom$zombieGen = function (model) {
+var $author$project$ZomZoms$zombieGen = function (model) {
 	return A4(
 		$elm$random$Random$map3,
 		F3(
@@ -11070,15 +11070,15 @@ var $author$project$ZomZom$zombieGen = function (model) {
 			}),
 		A2(
 			$elm$random$Random$float,
-			A2($author$project$ZomZom$xBoundry, model.heroX, -800),
-			A2($author$project$ZomZom$xBoundry, model.heroX, 800)),
+			A2($author$project$ZomZoms$xBoundry, model.heroX, -800),
+			A2($author$project$ZomZoms$xBoundry, model.heroX, 800)),
 		A2(
 			$elm$random$Random$float,
-			A2($author$project$ZomZom$yBoundry, model.heroY, -800),
-			A2($author$project$ZomZom$yBoundry, model.heroY, 800)),
+			A2($author$project$ZomZoms$yBoundry, model.heroY, -800),
+			A2($author$project$ZomZoms$yBoundry, model.heroY, 800)),
 		A2($elm$random$Random$float, 0.5, 1.5));
 };
-var $author$project$ZomZom$update = F2(
+var $author$project$ZomZoms$update = F2(
 	function (msg, model) {
 		update:
 		while (true) {
@@ -11095,13 +11095,13 @@ var $author$project$ZomZom$update = F2(
 					var v = _v3.b;
 					var reload = (model.reload > 0) ? (model.reload - (1 / 60)) : 0;
 					var regen = (_Utils_cmp(model.heroHp, model.heroMaxHp) < 0) ? model.healthRegen : 0;
-					var phase = ((model.timer === 61) && _Utils_eq(model.phase, $author$project$ZomZom$Start)) ? $author$project$ZomZom$Shop : model.phase;
+					var phase = ((model.timer === 61) && _Utils_eq(model.phase, $author$project$ZomZoms$Start)) ? $author$project$ZomZoms$Shop : model.phase;
 					var offline = (((model.com === 'Offline mode. No progress will be saved.') || (model.com === 'network error')) && (!model.poorBoy)) ? '' : model.com;
-					var hits = A2($author$project$ZomZom$collisions, model.gun, model.army);
+					var hits = A2($author$project$ZomZoms$collisions, model.gun, model.army);
 					var newArmy = hits.b.b;
 					var score = (model.score + $elm$core$List$length(model.army)) - $elm$core$List$length(newArmy);
 					var feeding = 5 * $elm$core$Basics$sin(20 * time);
-					var damage = A2($author$project$ZomZom$nom, model, newArmy);
+					var damage = A2($author$project$ZomZoms$nom, model, newArmy);
 					var allRagsNoRiches = (model.poorBoy > 0) ? (model.poorBoy - (1 / 60)) : 0;
 					var addCash = hits.b.a;
 					if (model.heroHp > 0) {
@@ -11109,13 +11109,13 @@ var $author$project$ZomZom$update = F2(
 							_Utils_update(
 								model,
 								{
-									army: _Utils_eq(model.phase, $author$project$ZomZom$Start) ? A4($author$project$ZomZom$updatePositions, model.heroX, model.heroY, feeding, newArmy) : _List_Nil,
+									army: _Utils_eq(model.phase, $author$project$ZomZoms$Start) ? A4($author$project$ZomZoms$updatePositions, model.heroX, model.heroY, feeding, newArmy) : _List_Nil,
 									cash: model.cash + $elm$core$Basics$round(addCash),
 									com: offline,
-									gun: $author$project$ZomZom$shootGun(hits.a),
+									gun: $author$project$ZomZoms$shootGun(hits.a),
 									heroHp: A3($elm$core$Basics$clamp, 0, model.heroMaxHp, (model.heroHp - ((1 / 60) * damage)) + regen),
-									heroX: ((!u) && (!v)) ? A2($author$project$ZomZom$xBoundry, model.heroX, x * model.heroSpeed) : (((!x) && (!y)) ? A2($author$project$ZomZom$xBoundry, model.heroX, u * model.heroSpeed) : model.heroX),
-									heroY: ((!u) && (!v)) ? A2($author$project$ZomZom$yBoundry, model.heroY, y * model.heroSpeed) : (((!x) && (!y)) ? A2($author$project$ZomZom$yBoundry, model.heroY, v * model.heroSpeed) : model.heroY),
+									heroX: ((!u) && (!v)) ? A2($author$project$ZomZoms$xBoundry, model.heroX, x * model.heroSpeed) : (((!x) && (!y)) ? A2($author$project$ZomZoms$xBoundry, model.heroX, u * model.heroSpeed) : model.heroX),
+									heroY: ((!u) && (!v)) ? A2($author$project$ZomZoms$yBoundry, model.heroY, y * model.heroSpeed) : (((!x) && (!y)) ? A2($author$project$ZomZoms$yBoundry, model.heroY, v * model.heroSpeed) : model.heroY),
 									phase: phase,
 									poorBoy: allRagsNoRiches,
 									reload: reload,
@@ -11130,19 +11130,19 @@ var $author$project$ZomZom$update = F2(
 									$elm$core$Basics$round(4 - (model.day / 5))),
 								model.timer))) && model.spawn) ? A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$NewZombie,
-								$author$project$ZomZom$zombieGen(model)) : (((model.timer >= 44) && ((model.timer < 45) && model.spawn)) ? A2(
+								$author$project$ZomZoms$NewZombie,
+								$author$project$ZomZoms$zombieGen(model)) : (((model.timer >= 44) && ((model.timer < 45) && model.spawn)) ? A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$NewZombie,
-								$author$project$ZomZom$bossZombieGen(model)) : ((_Utils_eq(model.phase, $author$project$ZomZom$Shop) && ((!_Utils_eq(model.phase, phase)) && _Utils_eq(phase, $author$project$ZomZom$Start))) ? $elm$core$Platform$Cmd$batch(
+								$author$project$ZomZoms$NewZombie,
+								$author$project$ZomZoms$bossZombieGen(model)) : ((_Utils_eq(model.phase, $author$project$ZomZoms$Shop) && ((!_Utils_eq(model.phase, phase)) && _Utils_eq(phase, $author$project$ZomZoms$Start))) ? $elm$core$Platform$Cmd$batch(
 								_List_fromArray(
 									[
-										$author$project$ZomZom$saveStats(model.upgrades),
-										$author$project$ZomZom$saveScore(model.userInfo)
+										$author$project$ZomZoms$saveStats(model.upgrades),
+										$author$project$ZomZoms$saveScore(model.userInfo)
 									])) : $elm$core$Platform$Cmd$none)));
 					} else {
-						var $temp$msg = $author$project$ZomZom$Death,
-							$temp$model = $author$project$ZomZom$youDied(model);
+						var $temp$msg = $author$project$ZomZoms$Death,
+							$temp$model = $author$project$ZomZoms$youDied(model);
 						msg = $temp$msg;
 						model = $temp$model;
 						continue update;
@@ -11161,22 +11161,22 @@ var $author$project$ZomZom$update = F2(
 					return _Utils_Tuple2(
 						_Utils_update(
 							model,
-							{army: _List_Nil, day: model.day + 1, heroHp: model.heroMaxHp, phase: $author$project$ZomZom$Start, timer: 0}),
+							{army: _List_Nil, day: model.day + 1, heroHp: model.heroMaxHp, phase: $author$project$ZomZoms$Start, timer: 0}),
 						$elm$core$Platform$Cmd$none);
 				case 'StatsButton':
 					return _Utils_Tuple2(
 						_Utils_update(
 							model,
-							{phase: $author$project$ZomZom$Scoreboard}),
+							{phase: $author$project$ZomZoms$Scoreboard}),
 						$elm$core$Platform$Cmd$none);
 				case 'ShopButton':
 					return _Utils_Tuple2(
 						_Utils_update(
 							model,
-							{phase: $author$project$ZomZom$Shop}),
+							{phase: $author$project$ZomZoms$Shop}),
 						$elm$core$Platform$Cmd$none);
 				case 'Death':
-					var $temp$msg = $author$project$ZomZom$Save,
+					var $temp$msg = $author$project$ZomZoms$Save,
 						$temp$model = model;
 					msg = $temp$msg;
 					model = $temp$model;
@@ -11206,7 +11206,7 @@ var $author$project$ZomZom$update = F2(
 							}),
 						$elm$core$Platform$Cmd$none);
 				case 'Shoot':
-					var newBullets = $author$project$ZomZom$fire(model);
+					var newBullets = $author$project$ZomZoms$fire(model);
 					return (!model.reload) ? _Utils_Tuple2(
 						_Utils_update(
 							model,
@@ -11222,7 +11222,7 @@ var $author$project$ZomZom$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v5 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v5 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v5.b) {
 						if (_v5.a) {
 							return _Utils_Tuple2(
@@ -11247,7 +11247,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11257,7 +11257,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'ArmorUp':
@@ -11267,7 +11267,7 @@ var $author$project$ZomZom$update = F2(
 					var newArmor = oldStat.value + 100;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v6 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v6 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v6.b) {
 						if (_v6.a) {
 							return _Utils_Tuple2(
@@ -11292,7 +11292,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11302,7 +11302,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'MuzzleVUp':
@@ -11312,7 +11312,7 @@ var $author$project$ZomZom$update = F2(
 					var newMuzzleV = oldStat.value + 5;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v7 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v7 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v7.b) {
 						if (_v7.a) {
 							return _Utils_Tuple2(
@@ -11337,7 +11337,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11347,7 +11347,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'DamageUp':
@@ -11357,7 +11357,7 @@ var $author$project$ZomZom$update = F2(
 					var newDamage = oldStat.value + 3;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v8 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v8 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v8.b) {
 						if (_v8.a) {
 							return _Utils_Tuple2(
@@ -11382,7 +11382,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11392,7 +11392,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'FireRateUp':
@@ -11402,7 +11402,7 @@ var $author$project$ZomZom$update = F2(
 					var newFireRate = oldStat.value - (1 / 30);
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v9 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v9 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v9.b) {
 						if (_v9.a) {
 							return _Utils_Tuple2(
@@ -11427,7 +11427,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11437,7 +11437,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'SpreadUp':
@@ -11447,7 +11447,7 @@ var $author$project$ZomZom$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v10 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v10 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v10.b) {
 						if (_v10.a) {
 							return _Utils_Tuple2(
@@ -11472,7 +11472,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11482,7 +11482,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'PenetrationUp':
@@ -11492,7 +11492,7 @@ var $author$project$ZomZom$update = F2(
 					var newPenetration = oldStat.value + 1;
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v11 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v11 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v11.b) {
 						if (_v11.a) {
 							return _Utils_Tuple2(
@@ -11517,7 +11517,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11527,7 +11527,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'HealthRegenUp':
@@ -11537,7 +11537,7 @@ var $author$project$ZomZom$update = F2(
 					var newHealthRegen = oldStat.value + (1 / 120);
 					var cost = oldStat.cost * 2;
 					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
-					var _v12 = A3($author$project$ZomZom$canBuy, model.cash, oldStat.cost, oldStat.progress);
+					var _v12 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v12.b) {
 						if (_v12.a) {
 							return _Utils_Tuple2(
@@ -11562,7 +11562,7 @@ var $author$project$ZomZom$update = F2(
 									{poorBoy: allRagsNoRiches}),
 								A2(
 									$elm$random$Random$generate,
-									$author$project$ZomZom$Joke,
+									$author$project$ZomZoms$Joke,
 									A2($elm$random$Random$int, 0, 9)));
 						}
 					} else {
@@ -11572,7 +11572,7 @@ var $author$project$ZomZom$update = F2(
 								{poorBoy: allRagsNoRiches}),
 							A2(
 								$elm$random$Random$generate,
-								$author$project$ZomZom$Joke,
+								$author$project$ZomZoms$Joke,
 								$elm$random$Random$constant(10)));
 					}
 				case 'MouseDown':
@@ -11892,14 +11892,14 @@ var $author$project$ZomZom$update = F2(
 				case 'Signup':
 					return _Utils_Tuple2(
 						model,
-						A2($author$project$ZomZom$addUser, model.name, model.pass));
+						A2($author$project$ZomZoms$addUser, model.name, model.pass));
 				case 'Login':
-					var stat = A3($author$project$ZomZom$getStats, model.upgrades, model.name, model.pass);
-					var prog = A3($author$project$ZomZom$getScore, model.userInfo, model.name, model.pass);
+					var stat = A3($author$project$ZomZoms$getStats, model.upgrades, model.name, model.pass);
+					var prog = A3($author$project$ZomZoms$getScore, model.userInfo, model.name, model.pass);
 					return _Utils_Tuple2(
 						_Utils_update(
 							model,
-							{day: model.day + 1, phase: $author$project$ZomZom$Start}),
+							{day: model.day + 1, phase: $author$project$ZomZoms$Start}),
 						$elm$core$Platform$Cmd$batch(
 							_List_fromArray(
 								[stat, prog])));
@@ -11908,10 +11908,10 @@ var $author$project$ZomZom$update = F2(
 						_Utils_update(
 							model,
 							{day: model.day + 1}),
-						A2($author$project$ZomZom$attemptLogin, model.name, model.pass));
+						A2($author$project$ZomZoms$attemptLogin, model.name, model.pass));
 				case 'Save':
-					var stat = $author$project$ZomZom$saveStats(model.upgrades);
-					var prog = $author$project$ZomZom$saveScore(model.userInfo);
+					var stat = $author$project$ZomZoms$saveStats(model.upgrades);
+					var prog = $author$project$ZomZoms$saveScore(model.userInfo);
 					return _Utils_Tuple2(
 						model,
 						$elm$core$Platform$Cmd$batch(
@@ -11932,7 +11932,7 @@ var $author$project$ZomZom$update = F2(
 							_Utils_update(
 								model,
 								{
-									com: $author$project$ZomZom$handleError(error)
+									com: $author$project$ZomZoms$handleError(error)
 								}),
 							$elm$core$Platform$Cmd$none);
 					}
@@ -11973,7 +11973,7 @@ var $author$project$ZomZom$update = F2(
 							_Utils_update(
 								model,
 								{
-									com: $author$project$ZomZom$handleError(error)
+									com: $author$project$ZomZoms$handleError(error)
 								}),
 							$elm$core$Platform$Cmd$none);
 					}
@@ -11997,7 +11997,7 @@ var $author$project$ZomZom$update = F2(
 								return _Utils_Tuple2(
 									_Utils_update(
 										model,
-										{name: '', pass: '', pass2: '', phase: $author$project$ZomZom$Title}),
+										{name: '', pass: '', pass2: '', phase: $author$project$ZomZoms$Title}),
 									$elm$core$Platform$Cmd$none);
 							case 'ProgressSaved':
 								return _Utils_Tuple2(
@@ -12006,7 +12006,7 @@ var $author$project$ZomZom$update = F2(
 										{com: 'Progress Saved'}),
 									$elm$core$Platform$Cmd$none);
 							case 'LoggedIn':
-								var $temp$msg = $author$project$ZomZom$Login,
+								var $temp$msg = $author$project$ZomZoms$Login,
 									$temp$model = model;
 								msg = $temp$msg;
 								model = $temp$model;
@@ -12020,8 +12020,8 @@ var $author$project$ZomZom$update = F2(
 							_Utils_update(
 								model,
 								{
-									com: $author$project$ZomZom$handleError(error),
-									phase: (A2($elm$core$String$left, 3, model.com) === 'bad') ? $author$project$ZomZom$Start : model.phase
+									com: $author$project$ZomZoms$handleError(error),
+									phase: (A2($elm$core$String$left, 3, model.com) === 'bad') ? $author$project$ZomZoms$Start : model.phase
 								}),
 							$elm$core$Platform$Cmd$none);
 					}
@@ -12041,31 +12041,31 @@ var $author$project$ZomZom$update = F2(
 							_Utils_update(
 								model,
 								{
-									com: $author$project$ZomZom$handleError(error)
+									com: $author$project$ZomZoms$handleError(error)
 								}),
 							$elm$core$Platform$Cmd$none);
 					}
 				case 'Logout':
-					var stat = $author$project$ZomZom$saveStats(model.upgrades);
-					var prog = $author$project$ZomZom$saveScore(model.userInfo);
+					var stat = $author$project$ZomZoms$saveStats(model.upgrades);
+					var prog = $author$project$ZomZoms$saveScore(model.userInfo);
 					return _Utils_Tuple2(
 						_Utils_update(
 							model,
-							{phase: $author$project$ZomZom$Title}),
+							{phase: $author$project$ZomZoms$Title}),
 						$elm$core$Platform$Cmd$batch(
 							_List_fromArray(
-								[stat, prog, $author$project$ZomZom$logOut])));
+								[stat, prog, $author$project$ZomZoms$logOut])));
 				case 'MakeRequest':
-					var stat = $author$project$ZomZom$saveStats(model.upgrades);
-					var prog = $author$project$ZomZom$saveScore(model.userInfo);
+					var stat = $author$project$ZomZoms$saveStats(model.upgrades);
+					var prog = $author$project$ZomZoms$saveScore(model.userInfo);
 					return _Utils_Tuple2(
 						model,
 						$elm$core$Platform$Cmd$batch(
 							_List_fromArray(
 								[stat, prog])));
 				case 'UrlChange':
-					var stat = $author$project$ZomZom$saveStats(model.upgrades);
-					var prog = $author$project$ZomZom$saveScore(model.userInfo);
+					var stat = $author$project$ZomZoms$saveStats(model.upgrades);
+					var prog = $author$project$ZomZoms$saveScore(model.userInfo);
 					return _Utils_Tuple2(
 						model,
 						$elm$core$Platform$Cmd$batch(
@@ -12076,7 +12076,7 @@ var $author$project$ZomZom$update = F2(
 			}
 		}
 	});
-var $author$project$ZomZom$Play = {$: 'Play'};
+var $author$project$ZomZoms$Play = {$: 'Play'};
 var $MacCASOutreach$graphicsvg$GraphicSVG$NoLine = {$: 'NoLine'};
 var $MacCASOutreach$graphicsvg$GraphicSVG$blank = A4($MacCASOutreach$graphicsvg$GraphicSVG$RGBA, 0, 0, 0, 0);
 var $MacCASOutreach$graphicsvg$GraphicSVG$subtract = F2(
@@ -12474,7 +12474,7 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$darkGrey = A4($MacCASOutreach$graphics
 var $MacCASOutreach$graphicsvg$GraphicSVG$grey = A4($MacCASOutreach$graphicsvg$GraphicSVG$RGBA, 211, 215, 207, 1);
 var $MacCASOutreach$graphicsvg$GraphicSVG$lightGrey = A4($MacCASOutreach$graphicsvg$GraphicSVG$RGBA, 238, 238, 236, 1);
 var $MacCASOutreach$graphicsvg$GraphicSVG$red = A4($MacCASOutreach$graphicsvg$GraphicSVG$RGBA, 204, 0, 0, 1);
-var $author$project$ZomZom$isClicked = F2(
+var $author$project$ZomZoms$isClicked = F2(
 	function (button, isIt) {
 		if (isIt) {
 			switch (button) {
@@ -12887,14 +12887,14 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$text = function (str) {
 		A8($MacCASOutreach$graphicsvg$GraphicSVG$Face, 12, false, false, false, false, false, $MacCASOutreach$graphicsvg$GraphicSVG$Serif, $MacCASOutreach$graphicsvg$GraphicSVG$AlignLeft),
 		str);
 };
-var $author$project$ZomZom$deathScreen = function (model) {
+var $author$project$ZomZoms$deathScreen = function (model) {
 	var yesButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'play', model.pPress).b,
+		A2($author$project$ZomZoms$isClicked, 'play', model.pPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'play', model.pPress).a,
+			A2($author$project$ZomZoms$isClicked, 'play', model.pPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 400, 150, 30)));
 	var under = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$outlined,
@@ -12953,13 +12953,13 @@ var $author$project$ZomZom$deathScreen = function (model) {
 		_Utils_Tuple2(250, -100),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('play'),
+				$author$project$ZomZoms$MouseDown('play'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$Play,
+					$author$project$ZomZoms$Play,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[yesButton, start]))))));
@@ -13005,20 +13005,20 @@ var $author$project$ZomZom$deathScreen = function (model) {
 	var noButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'quit', model.qPress).b,
+		A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'quit', model.qPress).a,
+			A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 400, 150, 30)));
 	var no = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-250, -100),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('quit'),
+				$author$project$ZomZoms$MouseDown('quit'),
 				$MacCASOutreach$graphicsvg$GraphicSVG$group(
 					_List_fromArray(
 						[noButton, quit])))));
@@ -13059,7 +13059,7 @@ var $author$project$ZomZom$deathScreen = function (model) {
 	var body = A3($MacCASOutreach$graphicsvg$GraphicSVG$collage, 1920, 1200, shapes);
 	return {body: body, title: title};
 };
-var $author$project$ZomZom$Direction = function (a) {
+var $author$project$ZomZoms$Direction = function (a) {
 	return {$: 'Direction', a: a};
 };
 var $MacCASOutreach$graphicsvg$GraphicSVG$alignLeft = function (stencil) {
@@ -13100,7 +13100,7 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$rotate = F2(
 	function (theta, shape) {
 		return A2($MacCASOutreach$graphicsvg$GraphicSVG$Rotate, theta, shape);
 	});
-var $author$project$ZomZom$oneBullet = function (bullet) {
+var $author$project$ZomZoms$oneBullet = function (bullet) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(bullet.x, bullet.y),
@@ -13109,7 +13109,7 @@ var $author$project$ZomZom$oneBullet = function (bullet) {
 			bullet.dir + ((3 * $elm$core$Basics$pi) / 2),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-				$author$project$ZomZom$Direction,
+				$author$project$ZomZoms$Direction,
 				$MacCASOutreach$graphicsvg$GraphicSVG$group(
 					_List_fromArray(
 						[
@@ -13126,11 +13126,11 @@ var $author$project$ZomZom$oneBullet = function (bullet) {
 								$MacCASOutreach$graphicsvg$GraphicSVG$circle(bullet.size)))
 						])))));
 };
-var $author$project$ZomZom$renderBullets = function (gun) {
+var $author$project$ZomZoms$renderBullets = function (gun) {
 	return $MacCASOutreach$graphicsvg$GraphicSVG$group(
-		A2($elm$core$List$map, $author$project$ZomZom$oneBullet, gun));
+		A2($elm$core$List$map, $author$project$ZomZoms$oneBullet, gun));
 };
-var $author$project$ZomZom$oneZombie = function (zombie) {
+var $author$project$ZomZoms$oneZombie = function (zombie) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(zombie.x, zombie.y),
@@ -13142,7 +13142,7 @@ var $author$project$ZomZom$oneZombie = function (zombie) {
 					zombie.dir,
 					A2(
 						$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-						$author$project$ZomZom$Direction,
+						$author$project$ZomZoms$Direction,
 						$MacCASOutreach$graphicsvg$GraphicSVG$group(
 							_List_fromArray(
 								[
@@ -13212,9 +13212,9 @@ var $author$project$ZomZom$oneZombie = function (zombie) {
 						A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, zombie.maxHp, 12, 2)))
 				])));
 };
-var $author$project$ZomZom$renderZombies = function (army) {
+var $author$project$ZomZoms$renderZombies = function (army) {
 	return $MacCASOutreach$graphicsvg$GraphicSVG$group(
-		A2($elm$core$List$map, $author$project$ZomZom$oneZombie, army));
+		A2($elm$core$List$map, $author$project$ZomZoms$oneZombie, army));
 };
 var $MacCASOutreach$graphicsvg$GraphicSVG$ssa = function (n) {
 	return A3($elm$core$Basics$clamp, 0, 1, n);
@@ -13231,7 +13231,7 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$rgba = F4(
 			$MacCASOutreach$graphicsvg$GraphicSVG$ssc(b),
 			$MacCASOutreach$graphicsvg$GraphicSVG$ssa(a));
 	});
-var $author$project$ZomZom$gameScreen = function (model) {
+var $author$project$ZomZoms$gameScreen = function (model) {
 	var under = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$outlined,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(10),
@@ -13410,7 +13410,7 @@ var $author$project$ZomZom$gameScreen = function (model) {
 			A2($MacCASOutreach$graphicsvg$GraphicSVG$rectangle, 8, 15)));
 	var hero = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-		$author$project$ZomZom$Direction,
+		$author$project$ZomZoms$Direction,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$move,
 			_Utils_Tuple2(model.heroX, model.heroY),
@@ -13454,7 +13454,7 @@ var $author$project$ZomZom$gameScreen = function (model) {
 		A2($MacCASOutreach$graphicsvg$GraphicSVG$rectangle, 1895, 1175));
 	var border = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-		$author$project$ZomZom$Direction,
+		$author$project$ZomZoms$Direction,
 		$MacCASOutreach$graphicsvg$GraphicSVG$group(
 			_List_fromArray(
 				[back, b1, b2, b3])));
@@ -13468,15 +13468,15 @@ var $author$project$ZomZom$gameScreen = function (model) {
 			cash,
 			instruct,
 			instruct2,
-			$author$project$ZomZom$renderBullets(model.gun),
+			$author$project$ZomZoms$renderBullets(model.gun),
 			hero,
-			$author$project$ZomZom$renderZombies(model.army),
+			$author$project$ZomZoms$renderZombies(model.army),
 			progSaved
 		]);
 	var body = A3($MacCASOutreach$graphicsvg$GraphicSVG$collage, 1920, 1200, shapes);
 	return {body: body, title: title};
 };
-var $author$project$ZomZom$ShopButton = {$: 'ShopButton'};
+var $author$project$ZomZoms$ShopButton = {$: 'ShopButton'};
 var $MacCASOutreach$graphicsvg$GraphicSVG$AlignRight = {$: 'AlignRight'};
 var $MacCASOutreach$graphicsvg$GraphicSVG$alignRight = function (stencil) {
 	if (stencil.$ === 'Text') {
@@ -13499,7 +13499,7 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$alignRight = function (stencil) {
 		return a;
 	}
 };
-var $author$project$ZomZom$displayName = function (n) {
+var $author$project$ZomZoms$displayName = function (n) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$filled,
 		$MacCASOutreach$graphicsvg$GraphicSVG$black,
@@ -13511,7 +13511,7 @@ var $author$project$ZomZom$displayName = function (n) {
 					$MacCASOutreach$graphicsvg$GraphicSVG$text(
 						A2($elm$core$String$left, 10, n))))));
 };
-var $author$project$ZomZom$displayScore = function (i) {
+var $author$project$ZomZoms$displayScore = function (i) {
 	return (!i) ? A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$filled,
 		$MacCASOutreach$graphicsvg$GraphicSVG$red,
@@ -13552,7 +13552,7 @@ var $MacCASOutreach$graphicsvg$GraphicSVG$underline = function (stencil) {
 		return a;
 	}
 };
-var $author$project$ZomZom$scoreScreen = function (model) {
+var $author$project$ZomZoms$scoreScreen = function (model) {
 	var welcome = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(20, 330),
@@ -13644,23 +13644,23 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var sButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'highScores', model.sPress).b,
+		A2($author$project$ZomZoms$isClicked, 'highScores', model.sPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'highScores', model.sPress).a,
+			A2($author$project$ZomZoms$isClicked, 'highScores', model.sPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var shopButton = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('highScores'),
+				$author$project$ZomZoms$MouseDown('highScores'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$ShopButton,
+					$author$project$ZomZoms$ShopButton,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[sButton, shop]))))));
@@ -13687,20 +13687,20 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var qButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'quit', model.qPress).b,
+		A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'quit', model.qPress).a,
+			A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var quitButton = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-625, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('quit'),
+				$author$project$ZomZoms$MouseDown('quit'),
 				$MacCASOutreach$graphicsvg$GraphicSVG$group(
 					_List_fromArray(
 						[qButton, quit])))));
@@ -13873,83 +13873,83 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var n1 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, 300),
-		$author$project$ZomZom$displayName(hScores.n1));
+		$author$project$ZomZoms$displayName(hScores.n1));
 	var n10 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, -285),
-		$author$project$ZomZom$displayName(hScores.n10));
+		$author$project$ZomZoms$displayName(hScores.n10));
 	var n2 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, 235),
-		$author$project$ZomZom$displayName(hScores.n2));
+		$author$project$ZomZoms$displayName(hScores.n2));
 	var n3 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, 170),
-		$author$project$ZomZom$displayName(hScores.n3));
+		$author$project$ZomZoms$displayName(hScores.n3));
 	var n4 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, 105),
-		$author$project$ZomZom$displayName(hScores.n4));
+		$author$project$ZomZoms$displayName(hScores.n4));
 	var n5 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, 40),
-		$author$project$ZomZom$displayName(hScores.n5));
+		$author$project$ZomZoms$displayName(hScores.n5));
 	var n6 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, -25),
-		$author$project$ZomZom$displayName(hScores.n6));
+		$author$project$ZomZoms$displayName(hScores.n6));
 	var n7 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, -90),
-		$author$project$ZomZom$displayName(hScores.n7));
+		$author$project$ZomZoms$displayName(hScores.n7));
 	var n8 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, -155),
-		$author$project$ZomZom$displayName(hScores.n8));
+		$author$project$ZomZoms$displayName(hScores.n8));
 	var n9 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-400, -220),
-		$author$project$ZomZom$displayName(hScores.n9));
+		$author$project$ZomZoms$displayName(hScores.n9));
 	var s1 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, 300),
-		$author$project$ZomZom$displayScore(hScores.s1));
+		$author$project$ZomZoms$displayScore(hScores.s1));
 	var s10 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, -285),
-		$author$project$ZomZom$displayScore(hScores.s10));
+		$author$project$ZomZoms$displayScore(hScores.s10));
 	var s2 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, 235),
-		$author$project$ZomZom$displayScore(hScores.s2));
+		$author$project$ZomZoms$displayScore(hScores.s2));
 	var s3 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, 170),
-		$author$project$ZomZom$displayScore(hScores.s3));
+		$author$project$ZomZoms$displayScore(hScores.s3));
 	var s4 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, 105),
-		$author$project$ZomZom$displayScore(hScores.s4));
+		$author$project$ZomZoms$displayScore(hScores.s4));
 	var s5 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, 40),
-		$author$project$ZomZom$displayScore(hScores.s5));
+		$author$project$ZomZoms$displayScore(hScores.s5));
 	var s6 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, -25),
-		$author$project$ZomZom$displayScore(hScores.s6));
+		$author$project$ZomZoms$displayScore(hScores.s6));
 	var s7 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, -90),
-		$author$project$ZomZom$displayScore(hScores.s7));
+		$author$project$ZomZoms$displayScore(hScores.s7));
 	var s8 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, -155),
-		$author$project$ZomZom$displayScore(hScores.s8));
+		$author$project$ZomZoms$displayScore(hScores.s8));
 	var s9 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(25, -220),
-		$author$project$ZomZom$displayScore(hScores.s9));
+		$author$project$ZomZoms$displayScore(hScores.s9));
 	var edges = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 20),
@@ -13992,43 +13992,43 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var d9 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, -220),
-		$author$project$ZomZom$displayScore(hScores.d9));
+		$author$project$ZomZoms$displayScore(hScores.d9));
 	var d8 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, -155),
-		$author$project$ZomZom$displayScore(hScores.d8));
+		$author$project$ZomZoms$displayScore(hScores.d8));
 	var d7 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, -90),
-		$author$project$ZomZom$displayScore(hScores.d7));
+		$author$project$ZomZoms$displayScore(hScores.d7));
 	var d6 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, -25),
-		$author$project$ZomZom$displayScore(hScores.d6));
+		$author$project$ZomZoms$displayScore(hScores.d6));
 	var d5 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, 40),
-		$author$project$ZomZom$displayScore(hScores.d5));
+		$author$project$ZomZoms$displayScore(hScores.d5));
 	var d4 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, 105),
-		$author$project$ZomZom$displayScore(hScores.d4));
+		$author$project$ZomZoms$displayScore(hScores.d4));
 	var d3 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, 170),
-		$author$project$ZomZom$displayScore(hScores.d3));
+		$author$project$ZomZoms$displayScore(hScores.d3));
 	var d2 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, 235),
-		$author$project$ZomZom$displayScore(hScores.d2));
+		$author$project$ZomZoms$displayScore(hScores.d2));
 	var d10 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, -285),
-		$author$project$ZomZom$displayScore(hScores.d10));
+		$author$project$ZomZoms$displayScore(hScores.d10));
 	var d1 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(165, 300),
-		$author$project$ZomZom$displayScore(hScores.d1));
+		$author$project$ZomZoms$displayScore(hScores.d1));
 	var scores = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(75, -20),
@@ -14062,23 +14062,23 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var button = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'play', model.pPress).b,
+		A2($author$project$ZomZoms$isClicked, 'play', model.pPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'play', model.pPress).a,
+			A2($author$project$ZomZoms$isClicked, 'play', model.pPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var playButton = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(625, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('play'),
+				$author$project$ZomZoms$MouseDown('play'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$Play,
+					$author$project$ZomZoms$Play,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[button, start]))))));
@@ -14103,7 +14103,7 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 		A2($MacCASOutreach$graphicsvg$GraphicSVG$rectangle, 1895, 1175));
 	var border = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-		$author$project$ZomZom$Direction,
+		$author$project$ZomZoms$Direction,
 		$MacCASOutreach$graphicsvg$GraphicSVG$group(
 			_List_fromArray(
 				[back, b1, b2, b3])));
@@ -14112,16 +14112,16 @@ var $author$project$ZomZom$scoreScreen = function (model) {
 	var body = A3($MacCASOutreach$graphicsvg$GraphicSVG$collage, 1920, 1200, shapes);
 	return {body: body, title: title};
 };
-var $author$project$ZomZom$ArmorUp = {$: 'ArmorUp'};
-var $author$project$ZomZom$DamageUp = {$: 'DamageUp'};
-var $author$project$ZomZom$FireRateUp = {$: 'FireRateUp'};
-var $author$project$ZomZom$HealthRegenUp = {$: 'HealthRegenUp'};
-var $author$project$ZomZom$Logout = {$: 'Logout'};
-var $author$project$ZomZom$MuzzleVUp = {$: 'MuzzleVUp'};
-var $author$project$ZomZom$PenetrationUp = {$: 'PenetrationUp'};
-var $author$project$ZomZom$SpeedUp = {$: 'SpeedUp'};
-var $author$project$ZomZom$SpreadUp = {$: 'SpreadUp'};
-var $author$project$ZomZom$StatsButton = {$: 'StatsButton'};
+var $author$project$ZomZoms$ArmorUp = {$: 'ArmorUp'};
+var $author$project$ZomZoms$DamageUp = {$: 'DamageUp'};
+var $author$project$ZomZoms$FireRateUp = {$: 'FireRateUp'};
+var $author$project$ZomZoms$HealthRegenUp = {$: 'HealthRegenUp'};
+var $author$project$ZomZoms$Logout = {$: 'Logout'};
+var $author$project$ZomZoms$MuzzleVUp = {$: 'MuzzleVUp'};
+var $author$project$ZomZoms$PenetrationUp = {$: 'PenetrationUp'};
+var $author$project$ZomZoms$SpeedUp = {$: 'SpeedUp'};
+var $author$project$ZomZoms$SpreadUp = {$: 'SpreadUp'};
+var $author$project$ZomZoms$StatsButton = {$: 'StatsButton'};
 var $elm$html$Html$Attributes$height = function (n) {
 	return A2(
 		_VirtualDom_attribute,
@@ -14147,7 +14147,7 @@ var $elm$html$Html$Attributes$src = function (url) {
 		'src',
 		_VirtualDom_noJavaScriptOrHtmlUri(url));
 };
-var $author$project$ZomZom$armorStatBar = function (stat) {
+var $author$project$ZomZoms$armorStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 245),
@@ -14183,7 +14183,7 @@ var $author$project$ZomZom$armorStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Armor')))))))
 				])));
 };
-var $author$project$ZomZom$damageStatBar = function (stat) {
+var $author$project$ZomZoms$damageStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 45),
@@ -14219,7 +14219,7 @@ var $author$project$ZomZom$damageStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Damage')))))))
 				])));
 };
-var $author$project$ZomZom$fireRateStatBar = function (stat) {
+var $author$project$ZomZoms$fireRateStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, -265),
@@ -14255,7 +14255,7 @@ var $author$project$ZomZom$fireRateStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Fire Rate')))))))
 				])));
 };
-var $author$project$ZomZom$healthRegenStatBar = function (stat) {
+var $author$project$ZomZoms$healthRegenStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 145),
@@ -14291,7 +14291,7 @@ var $author$project$ZomZom$healthRegenStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Health Regen')))))))
 				])));
 };
-var $author$project$ZomZom$muzzleVStatBar = function (stat) {
+var $author$project$ZomZoms$muzzleVStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, -65),
@@ -14327,7 +14327,7 @@ var $author$project$ZomZom$muzzleVStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Muzzle Velocity')))))))
 				])));
 };
-var $author$project$ZomZom$penetrationStatBar = function (stat) {
+var $author$project$ZomZoms$penetrationStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, -165),
@@ -14363,7 +14363,7 @@ var $author$project$ZomZom$penetrationStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Penetration')))))))
 				])));
 };
-var $author$project$ZomZom$speedStatBar = function (stat) {
+var $author$project$ZomZoms$speedStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 345),
@@ -14399,7 +14399,7 @@ var $author$project$ZomZom$speedStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Speed')))))))
 				])));
 };
-var $author$project$ZomZom$spreadStatBar = function (stat) {
+var $author$project$ZomZoms$spreadStatBar = function (stat) {
 	return A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, -358),
@@ -14435,7 +14435,7 @@ var $author$project$ZomZom$spreadStatBar = function (stat) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$text('Shotgun Spread')))))))
 				])));
 };
-var $author$project$ZomZom$statsBox = function (model) {
+var $author$project$ZomZoms$statsBox = function (model) {
 	var statsTitle = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-155, 400),
@@ -14470,14 +14470,14 @@ var $author$project$ZomZom$statsBox = function (model) {
 				[
 					border,
 					statsTitle,
-					$author$project$ZomZom$speedStatBar(stats.speed),
-					$author$project$ZomZom$armorStatBar(stats.armor),
-					$author$project$ZomZom$healthRegenStatBar(stats.healthRegen),
-					$author$project$ZomZom$damageStatBar(stats.damage),
-					$author$project$ZomZom$muzzleVStatBar(stats.muzzleV),
-					$author$project$ZomZom$penetrationStatBar(stats.penetration),
-					$author$project$ZomZom$fireRateStatBar(stats.fireRate),
-					$author$project$ZomZom$spreadStatBar(stats.spread)
+					$author$project$ZomZoms$speedStatBar(stats.speed),
+					$author$project$ZomZoms$armorStatBar(stats.armor),
+					$author$project$ZomZoms$healthRegenStatBar(stats.healthRegen),
+					$author$project$ZomZoms$damageStatBar(stats.damage),
+					$author$project$ZomZoms$muzzleVStatBar(stats.muzzleV),
+					$author$project$ZomZoms$penetrationStatBar(stats.penetration),
+					$author$project$ZomZoms$fireRateStatBar(stats.fireRate),
+					$author$project$ZomZoms$spreadStatBar(stats.spread)
 				])));
 };
 var $elm$html$Html$Attributes$width = function (n) {
@@ -14486,7 +14486,7 @@ var $elm$html$Html$Attributes$width = function (n) {
 		'width',
 		$elm$core$String$fromInt(n));
 };
-var $author$project$ZomZom$shopScreen = function (model) {
+var $author$project$ZomZoms$shopScreen = function (model) {
 	var welcome = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(20, 330),
@@ -14582,10 +14582,10 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox8 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', spread.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', spread.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', spread.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', spread.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var speedText2 = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
@@ -14654,20 +14654,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox1 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', speed.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', speed.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', speed.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', speed.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var speedUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('speed'),
+			$author$project$ZomZoms$MouseDown('speed'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$SpeedUp,
+				$author$project$ZomZoms$SpeedUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(-590, 20),
@@ -14739,13 +14739,13 @@ var $author$project$ZomZom$shopScreen = function (model) {
 									(spread.progress < 0.9) ? ('$' + $elm$core$String$fromInt(spread.cost)) : 'Sold Out'))))))));
 	var shotgunUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('shotgun'),
+			$author$project$ZomZoms$MouseDown('shotgun'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$SpreadUp,
+				$author$project$ZomZoms$SpreadUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(370, -300),
@@ -14768,10 +14768,10 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var sButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'highScores', model.sPress).b,
+		A2($author$project$ZomZoms$isClicked, 'highScores', model.sPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'highScores', model.sPress).a,
+			A2($author$project$ZomZoms$isClicked, 'highScores', model.sPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var quit = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
@@ -14796,23 +14796,23 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var qButton = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'quit', model.qPress).b,
+		A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'quit', model.qPress).a,
+			A2($author$project$ZomZoms$isClicked, 'quit', model.qPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var quitButton = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(-625, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('quit'),
+				$author$project$ZomZoms$MouseDown('quit'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$Logout,
+					$author$project$ZomZoms$Logout,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[qButton, quit]))))));
@@ -14883,20 +14883,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox6 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', penetration.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', penetration.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', penetration.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', penetration.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var penetrationUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('penetration'),
+			$author$project$ZomZoms$MouseDown('penetration'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$PenetrationUp,
+				$author$project$ZomZoms$PenetrationUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(-270, -300),
@@ -15016,20 +15016,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox5 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', muzzleV.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', muzzleV.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', muzzleV.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', muzzleV.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var muzzleVUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('muzzleV'),
+			$author$project$ZomZoms$MouseDown('muzzleV'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$MuzzleVUp,
+				$author$project$ZomZoms$MuzzleVUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(-590, -300),
@@ -15061,13 +15061,13 @@ var $author$project$ZomZom$shopScreen = function (model) {
 		_Utils_Tuple2(0, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('highScores'),
+				$author$project$ZomZoms$MouseDown('highScores'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$StatsButton,
+					$author$project$ZomZoms$StatsButton,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[sButton, highScores]))))));
@@ -15138,20 +15138,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox4 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', healthRegen.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', healthRegen.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', healthRegen.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', healthRegen.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var healthRegenUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('healthRegen'),
+			$author$project$ZomZoms$MouseDown('healthRegen'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$HealthRegenUp,
+				$author$project$ZomZoms$HealthRegenUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(370, 20),
@@ -15235,20 +15235,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox7 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', fireRate.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', fireRate.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', fireRate.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', fireRate.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var fireRateUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('fireRate'),
+			$author$project$ZomZoms$MouseDown('fireRate'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$FireRateUp,
+				$author$project$ZomZoms$FireRateUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(50, -300),
@@ -15335,20 +15335,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox3 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', damage.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', damage.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', damage.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', damage.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var damageUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('damage'),
+			$author$project$ZomZoms$MouseDown('damage'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$DamageUp,
+				$author$project$ZomZoms$DamageUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(50, 20),
@@ -15371,23 +15371,23 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var button = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'play', model.pPress).b,
+		A2($author$project$ZomZoms$isClicked, 'play', model.pPress).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'play', model.pPress).a,
+			A2($author$project$ZomZoms$isClicked, 'play', model.pPress).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 100, 30)));
 	var playButton = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(625, -490),
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-			$author$project$ZomZom$MouseUp,
+			$author$project$ZomZoms$MouseUp,
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-				$author$project$ZomZom$MouseDown('play'),
+				$author$project$ZomZoms$MouseDown('play'),
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-					$author$project$ZomZom$Play,
+					$author$project$ZomZoms$Play,
 					$MacCASOutreach$graphicsvg$GraphicSVG$group(
 						_List_fromArray(
 							[button, start]))))));
@@ -15412,7 +15412,7 @@ var $author$project$ZomZom$shopScreen = function (model) {
 		A2($MacCASOutreach$graphicsvg$GraphicSVG$rectangle, 1895, 1175));
 	var border = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
-		$author$project$ZomZom$Direction,
+		$author$project$ZomZoms$Direction,
 		$MacCASOutreach$graphicsvg$GraphicSVG$group(
 			_List_fromArray(
 				[back, b1, b2, b3])));
@@ -15483,20 +15483,20 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var upgradeBox2 = A3(
 		$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
 		$MacCASOutreach$graphicsvg$GraphicSVG$solid(20),
-		A2($author$project$ZomZom$isClicked, 'upgrade', armor.click).b,
+		A2($author$project$ZomZoms$isClicked, 'upgrade', armor.click).b,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			A2($author$project$ZomZom$isClicked, 'upgrade', armor.click).a,
+			A2($author$project$ZomZoms$isClicked, 'upgrade', armor.click).a,
 			A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 300, 300, 10)));
 	var armorUpgrade = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseUp,
-		$author$project$ZomZom$MouseUp,
+		$author$project$ZomZoms$MouseUp,
 		A2(
 			$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseDown,
-			$author$project$ZomZom$MouseDown('armor'),
+			$author$project$ZomZoms$MouseDown('armor'),
 			A2(
 				$MacCASOutreach$graphicsvg$GraphicSVG$notifyTap,
-				$author$project$ZomZom$ArmorUp,
+				$author$project$ZomZoms$ArmorUp,
 				A2(
 					$MacCASOutreach$graphicsvg$GraphicSVG$move,
 					_Utils_Tuple2(-270, 20),
@@ -15516,7 +15516,7 @@ var $author$project$ZomZom$shopScreen = function (model) {
 			playButton,
 			welcome,
 			upgrades,
-			$author$project$ZomZom$statsBox(model),
+			$author$project$ZomZoms$statsBox(model),
 			highScoresButton,
 			quitButton,
 			day,
@@ -15528,24 +15528,24 @@ var $author$project$ZomZom$shopScreen = function (model) {
 	var body = A3($MacCASOutreach$graphicsvg$GraphicSVG$collage, 1920, 1200, shapes);
 	return {body: body, title: title};
 };
-var $author$project$ZomZom$Attempt = {$: 'Attempt'};
-var $author$project$ZomZom$Name = function (a) {
+var $author$project$ZomZoms$Attempt = {$: 'Attempt'};
+var $author$project$ZomZoms$Name = function (a) {
 	return {$: 'Name', a: a};
 };
-var $author$project$ZomZom$Password = function (a) {
+var $author$project$ZomZoms$Password = function (a) {
 	return {$: 'Password', a: a};
 };
-var $author$project$ZomZom$Password2 = function (a) {
+var $author$project$ZomZoms$Password2 = function (a) {
 	return {$: 'Password2', a: a};
 };
-var $author$project$ZomZom$Signup = {$: 'Signup'};
+var $author$project$ZomZoms$Signup = {$: 'Signup'};
 var $elm$html$Html$button = _VirtualDom_node('button');
 var $elm$html$Html$Attributes$disabled = $elm$html$Html$Attributes$boolProperty('disabled');
 var $elm$html$Html$div = _VirtualDom_node('div');
 var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$ZomZom$verify = F2(
+var $author$project$ZomZoms$verify = F2(
 	function (pass, p2) {
 		return (_Utils_eq(pass, p2) && (p2 !== '')) ? true : false;
 	});
@@ -15581,7 +15581,7 @@ var $elm$html$Html$Events$onInput = function (tagger) {
 var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
 var $elm$html$Html$Attributes$type_ = $elm$html$Html$Attributes$stringProperty('type');
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
-var $author$project$ZomZom$viewInput = F4(
+var $author$project$ZomZoms$viewInput = F4(
 	function (t, p, v, toMsg) {
 		return A2(
 			$elm$html$Html$input,
@@ -15598,7 +15598,7 @@ var $author$project$ZomZom$viewInput = F4(
 				]),
 			_List_Nil);
 	});
-var $author$project$ZomZom$titleScreen = function (model) {
+var $author$project$ZomZoms$titleScreen = function (model) {
 	var welcome = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 150),
@@ -15643,21 +15643,21 @@ var $author$project$ZomZom$titleScreen = function (model) {
 					_List_Nil,
 					_List_fromArray(
 						[
-							A4($author$project$ZomZom$viewInput, 'text', 'Username', model.name, $author$project$ZomZom$Name)
+							A4($author$project$ZomZoms$viewInput, 'text', 'Username', model.name, $author$project$ZomZoms$Name)
 						])),
 					A2(
 					$elm$html$Html$div,
 					_List_Nil,
 					_List_fromArray(
 						[
-							A4($author$project$ZomZom$viewInput, 'password', 'Password', model.pass, $author$project$ZomZom$Password)
+							A4($author$project$ZomZoms$viewInput, 'password', 'Password', model.pass, $author$project$ZomZoms$Password)
 						])),
 					A2(
 					$elm$html$Html$div,
 					_List_Nil,
 					_List_fromArray(
 						[
-							A4($author$project$ZomZom$viewInput, 'password', 'Verify Password', model.pass2, $author$project$ZomZom$Password2)
+							A4($author$project$ZomZoms$viewInput, 'password', 'Verify Password', model.pass2, $author$project$ZomZoms$Password2)
 						])),
 					A2(
 					$elm$html$Html$div,
@@ -15669,8 +15669,8 @@ var $author$project$ZomZom$titleScreen = function (model) {
 							_List_fromArray(
 								[
 									$elm$html$Html$Attributes$disabled(
-									A2($author$project$ZomZom$verify, model.pass, model.pass2)),
-									$elm$html$Html$Events$onClick($author$project$ZomZom$Signup),
+									A2($author$project$ZomZoms$verify, model.pass, model.pass2)),
+									$elm$html$Html$Events$onClick($author$project$ZomZoms$Signup),
 									A2($elm$html$Html$Attributes$style, 'background-color', 'darkgreen'),
 									A2($elm$html$Html$Attributes$style, 'height', '85px'),
 									A2($elm$html$Html$Attributes$style, 'width', '40%'),
@@ -15690,7 +15690,7 @@ var $author$project$ZomZom$titleScreen = function (model) {
 							$elm$html$Html$button,
 							_List_fromArray(
 								[
-									$elm$html$Html$Events$onClick($author$project$ZomZom$Attempt),
+									$elm$html$Html$Events$onClick($author$project$ZomZoms$Attempt),
 									A2($elm$html$Html$Attributes$style, 'background-color', 'darkgreen'),
 									A2($elm$html$Html$Attributes$style, 'height', '85px'),
 									A2($elm$html$Html$Attributes$style, 'width', '40%'),
@@ -15773,29 +15773,29 @@ var $author$project$ZomZom$titleScreen = function (model) {
 	var body = A3($MacCASOutreach$graphicsvg$GraphicSVG$collage, 1920, 1200, shapes);
 	return {body: body, title: title};
 };
-var $author$project$ZomZom$view = function (model) {
+var $author$project$ZomZoms$view = function (model) {
 	var _v0 = model.phase;
 	switch (_v0.$) {
 		case 'Title':
-			return $author$project$ZomZom$titleScreen(model);
+			return $author$project$ZomZoms$titleScreen(model);
 		case 'Start':
-			return $author$project$ZomZom$gameScreen(model);
+			return $author$project$ZomZoms$gameScreen(model);
 		case 'Shop':
-			return $author$project$ZomZom$shopScreen(model);
+			return $author$project$ZomZoms$shopScreen(model);
 		case 'Scoreboard':
-			return $author$project$ZomZom$scoreScreen(model);
+			return $author$project$ZomZoms$scoreScreen(model);
 		default:
-			return $author$project$ZomZom$deathScreen(model);
+			return $author$project$ZomZoms$deathScreen(model);
 	}
 };
-var $author$project$ZomZom$main = A2(
+var $author$project$ZomZoms$main = A2(
 	$MacCASOutreach$graphicsvg$GraphicSVG$App$appWithTick,
-	$author$project$ZomZom$Tick,
-	{init: $author$project$ZomZom$init, onUrlChange: $author$project$ZomZom$UrlChange, onUrlRequest: $author$project$ZomZom$MakeRequest, subscriptions: $author$project$ZomZom$subscriptions, update: $author$project$ZomZom$update, view: $author$project$ZomZom$view});
-_Platform_export({'ZomZom':{'init':$author$project$ZomZom$main(
+	$author$project$ZomZoms$Tick,
+	{init: $author$project$ZomZoms$init, onUrlChange: $author$project$ZomZoms$UrlChange, onUrlRequest: $author$project$ZomZoms$MakeRequest, subscriptions: $author$project$ZomZoms$subscriptions, update: $author$project$ZomZoms$update, view: $author$project$ZomZoms$view});
+_Platform_export({'ZomZoms':{'init':$author$project$ZomZoms$main(
 	$elm$json$Json$Decode$succeed(_Utils_Tuple0))(0)}});}(this));
 
-  var app = Elm.ZomZom.init({ node: document.getElementById("elm") });
+  var app = Elm.ZomZoms.init({ node: document.getElementById("elm") });
 }
 catch (e)
 {
