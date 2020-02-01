@@ -123,43 +123,102 @@ When the player's hp drops to 0 in the **Start** phase, the phase is changed to 
 ### **Update**
 
 The update function runs off of the following messages:
-**Msg** | **Type Accepted** | **Description**
-----|----|----
-| Tick | **Float GetKeyState**       | Default graphicsSVG message called once every browser refresh
-| Tock | **Time.Posix**       | Message called by time subscription to start the clock every round
-| MakeRequest | **Browser.UrlRequest**   | Called on any browser request. Used to save progress
-| UrlChange | **Url.Url**     | Called on any browser url change. Also used to save progress
-| Play  |    | Begin next round
-| StatsButton |  | Move to the statistics/highscores screen
-| ShopButton  |  | Move to the shop
-| Death       || Call to end game and reset stats
-| Direction | **(Float, Float)**  | Called on any mouse movement to change the direction of the player
-| NewZombie Zombie   |   | Generates a zombie
-| Shoot Time.Posix   |   | Generates 1+ bullet(s)
-| MouseDown String   |   | Used to repeat the shoot call and to change button colours
-| MouseUp    |   | Used to end the repeating shoot call and to change button colours
-| SpeedUp    |   
-| ArmorUp    |   | Each `StatUp` message is associated to each stat. 
-| MuzzleVUp  |   | A check is performed to see if the player can afford the stat.
-| DamageUp   |   | If they can, the value is increased by an amount determined by the stat,
-| FireRateUp |   | the progress fraction is increased by 0.1 and
-| SpreadUp   |   | the cash value doubles.
-| PenetrationUp
-| HealthRegenUp
-| Joke | **Int**      | A list of random poor jokes is displayed when a user cant afford an upgrade
-| Name | **String**       | Name, Password and Password2 are just called to display information entered into a field in the login form
-| Password  |**String**
-| Password2 |**String**
-| GotResponse | **(Result Http.Error String)**    | Receives Http strings from the server. `"LoginFailed"` comes when the username/password does not match any in the system, `"Offline"` comes if no username or password is entered. `"LoggedOut"` comes if the user ends the session. `"ProgressSaved"` comes to comfirm saving of the user's upgrades and cash/score/day. `"LoggedIn"` comes upon successful login.
-| Save   |   | Save stats by encoding them as Json and sending them in a `Http.POST`
-| JsonUser | **(Result Http.Error UserInfo)**     | Receives a Json object to decode and assigns the user's cash, killcount and number of days survived. An error message is sent if there are any problems upon receipt.
-| JsonStats | **(Result Http.Error Stats)**       | Receives a Json object to decode and assigns the user's stat progress. An error message is sent if there are any problems upon receipt.
-| Signup  |  | Button to trigger **addPerson** and add the user to the system.
-| Login   |  | Assigns user stats and progress upon successful login.
-| Logout  |  | Ends authentication session.
-| Attempt |  | Sends username and password to the server to check authentication for a session.
-| HighscoreList | **(Result Http.Error Highscores)**      | Calls the server to sort the highscore list and send it here
-| NoOp   |   | empty message
+
+- Tick | **Float GetKeyState** 
+    - Default graphicsSVG message called once every browser refresh
+
+- Tock | **Time.Posix** 
+    - Message called by time subscription to start the clock every round
+
+- MakeRequest | **Browser.UrlRequest** 
+    - Called on any browser request. Used to save progress
+
+- UrlChange | **Url.Url** 
+    - Called on any browser url change. Also used to save progress
+
+- Play 
+    - Begin next round
+
+- StatsButton 
+    - Move to the statistics/highscores screen
+
+- ShopButton  
+    - Move to the shop
+
+- Death 
+    - Call to end game and reset stats
+
+- Direction | **(Float, Float)** 
+    - Called on any mouse movement to change the direction of the player
+
+- NewZombie Zombie 
+    - Generates a zombie
+
+- Shoot Time.Posix 
+    - Generates 1+ bullet(s)
+
+- MouseDown String 
+    - Used to repeat the shoot call and to change button colours
+
+- MouseUp 
+    - Used to end the repeating shoot call and to change button colours
+
+**Each `StatUp` message is associated to each stat. A check is performed to see if the player can afford the stat. If they can, the value is increased by an amount determined by the stat, the progress fraction is increased by 0.1 and the cash value doubles.**
+- SpeedUp   
+
+- ArmorUp    
+
+- MuzzleVUp  
+
+- DamageUp   
+
+- FireRateUp 
+
+- SpreadUp   
+
+- PenetrationUp 
+
+- HealthRegenUp 
+
+- Joke | **Int** 
+    - A list of random poor jokes is displayed when a user cant afford an upgrade
+
+- Name | **String**
+    - Name, Password and Password2 are just called to display information entered into a field in the login form
+
+- Password  | **String**
+
+- Password2 | **String**
+
+- GotResponse | **(Result Http.Error String)** 
+    - Receives Http strings from the server. `"LoginFailed"` comes when the username/password does not match any in the system, `"Offline"` comes if no username or password is entered. `"LoggedOut"` comes if the user ends the session. `"ProgressSaved"` comes to comfirm saving of the user's upgrades and cash/score/day. `"LoggedIn"` comes upon successful login. 
+
+- Save 
+    - Save stats by encoding them as Json and sending them in a `Http.POST` 
+
+- JsonUser | **(Result Http.Error UserInfo)** 
+    - Receives a Json object to decode and assigns the user's cash, killcount and number of days survived. An error message is sent if there are any problems upon receipt.
+
+- JsonStats | **(Result Http.Error Stats)** 
+    - Receives a Json object to decode and assigns the user's stat progress. An error message is sent if there are any problems upon receipt.
+
+- Signup  
+    - Button to trigger **addPerson** and add the user to the system.
+
+- Login   
+    - Assigns user stats and progress upon successful login.
+
+- Logout  
+    - Ends authentication session.
+
+- Attempt 
+    - Sends username and password to the server to check authentication for a session.
+
+- HighscoreList | **(Result Http.Error Highscores)** 
+    - Calls the server to sort the highscore list and send it here
+
+- NoOp 
+    - empty message 
 
 ---
 ### **Subscriptions**
