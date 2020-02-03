@@ -29,7 +29,7 @@ main = appWithTick Tick
 
 -----
 ### **Model**
-dddwwwwwww
+
 Variable | Type | Use
 ---|---|---
 name | String | The player's username to be sent to the server
