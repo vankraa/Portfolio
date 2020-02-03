@@ -8805,6 +8805,7 @@ var $author$project$ZomZoms$init = F3(
 	function (flags, url, key) {
 		var model = {
 			army: _List_Nil,
+			bSpawn: false,
 			cash: 20,
 			com: '',
 			damage: 5,
@@ -11058,9 +11059,9 @@ var $author$project$ZomZoms$zombieGen = function (model) {
 					colour: $MacCASOutreach$graphicsvg$GraphicSVG$green,
 					dir: A2($elm$core$Basics$atan2, y, x),
 					dmg: (3 + model.day) - 1,
-					hp: 10 + (5 * (model.day - 1)),
+					hp: 10 + (5 * model.day),
 					isHit: 0,
-					maxHp: 10 + (5 * (model.day - 1)),
+					maxHp: 10 + (5 * model.day),
 					size: 20,
 					speed: A3($elm$core$Basics$clamp, 0, 8, s + ((model.day - 1) / 10)),
 					value: 2 + (2 * model.day),
@@ -11121,7 +11122,10 @@ var $author$project$ZomZoms$update = F2(
 									reload: reload,
 									score: score
 								}),
-							(((model.timer === 2) || (!A2(
+							model.bSpawn ? A2(
+								$elm$random$Random$generate,
+								$author$project$ZomZoms$NewZombie,
+								$author$project$ZomZoms$bossZombieGen(model)) : ((((model.timer === 2) || (!A2(
 								$elm$core$Basics$modBy,
 								A3(
 									$elm$core$Basics$clamp,
@@ -11131,10 +11135,7 @@ var $author$project$ZomZoms$update = F2(
 								model.timer))) && model.spawn) ? A2(
 								$elm$random$Random$generate,
 								$author$project$ZomZoms$NewZombie,
-								$author$project$ZomZoms$zombieGen(model)) : (((model.timer >= 44) && ((model.timer < 45) && model.spawn)) ? A2(
-								$elm$random$Random$generate,
-								$author$project$ZomZoms$NewZombie,
-								$author$project$ZomZoms$bossZombieGen(model)) : ((_Utils_eq(model.phase, $author$project$ZomZoms$Shop) && ((!_Utils_eq(model.phase, phase)) && _Utils_eq(phase, $author$project$ZomZoms$Start))) ? $elm$core$Platform$Cmd$batch(
+								$author$project$ZomZoms$zombieGen(model)) : ((_Utils_eq(model.phase, $author$project$ZomZoms$Shop) && ((!_Utils_eq(model.phase, phase)) && _Utils_eq(phase, $author$project$ZomZoms$Start))) ? $elm$core$Platform$Cmd$batch(
 								_List_fromArray(
 									[
 										$author$project$ZomZoms$saveStats(model.upgrades),
@@ -11152,6 +11153,7 @@ var $author$project$ZomZoms$update = F2(
 						_Utils_update(
 							model,
 							{
+								bSpawn: ((model.timer === 45) && (model.day < 5)) ? true : ((((model.timer === 45) || (model.timer === 50)) && ((model.day >= 5) && (model.day < 10))) ? true : ((((model.timer === 40) || ((model.timer === 45) || (model.timer === 50))) && ((model.day >= 10) && (model.day < 15))) ? true : ((((model.timer === 35) || ((model.timer === 40) || ((model.timer === 45) || (model.timer === 50)))) && (model.day >= 15)) ? true : model.bSpawn))),
 								poorBoy: ((!model.timer) || (model.timer === 4)) ? 3 : model.poorBoy,
 								spawn: true,
 								timer: model.timer + 1
@@ -11202,6 +11204,7 @@ var $author$project$ZomZoms$update = F2(
 									_List_fromArray(
 										[newZombie]),
 									model.army),
+								bSpawn: false,
 								spawn: false
 							}),
 						$elm$core$Platform$Cmd$none);
@@ -11218,10 +11221,10 @@ var $author$project$ZomZoms$update = F2(
 				case 'SpeedUp':
 					var stats = model.upgrades;
 					var oldStat = stats.speed;
-					var newSpeed = oldStat.value + 1;
+					var newSpeed = oldStat.value + 0.5;
 					var newProgress = oldStat.progress + 0.1;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v5 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v5.b) {
 						if (_v5.a) {
@@ -11266,7 +11269,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newArmor = oldStat.value + 100;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v6 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v6.b) {
 						if (_v6.a) {
@@ -11311,7 +11314,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newMuzzleV = oldStat.value + 5;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v7 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v7.b) {
 						if (_v7.a) {
@@ -11356,7 +11359,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newDamage = oldStat.value + 3;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v8 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v8.b) {
 						if (_v8.a) {
@@ -11401,7 +11404,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newFireRate = oldStat.value - (1 / 30);
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v9 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v9.b) {
 						if (_v9.a) {
@@ -11446,7 +11449,7 @@ var $author$project$ZomZoms$update = F2(
 					var newSpread = oldStat.value + 1;
 					var newProgress = oldStat.progress + 0.1;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v10 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v10.b) {
 						if (_v10.a) {
@@ -11491,7 +11494,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newPenetration = oldStat.value + 1;
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v11 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v11.b) {
 						if (_v11.a) {
@@ -11536,7 +11539,7 @@ var $author$project$ZomZoms$update = F2(
 					var newProgress = oldStat.progress + 0.1;
 					var newHealthRegen = oldStat.value + (1 / 120);
 					var cost = oldStat.cost * 2;
-					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 2.5 : model.poorBoy;
+					var allRagsNoRiches = (_Utils_cmp(oldStat.cost, model.cash) > 0) ? 3 : model.poorBoy;
 					var _v12 = A3($author$project$ZomZoms$canBuy, model.cash, oldStat.cost, oldStat.progress);
 					if (_v12.b) {
 						if (_v12.a) {
@@ -13242,63 +13245,75 @@ var $author$project$ZomZoms$gameScreen = function (model) {
 			_Utils_Tuple2(960, 500)));
 	var title = 'ZomZom';
 	var timer = A2(
-		$MacCASOutreach$graphicsvg$GraphicSVG$move,
-		_Utils_Tuple2(700, 525),
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
 		A2(
-			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			$MacCASOutreach$graphicsvg$GraphicSVG$white,
-			$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
-				A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$size,
-					60,
-					$MacCASOutreach$graphicsvg$GraphicSVG$bold(
-						$MacCASOutreach$graphicsvg$GraphicSVG$text(
-							'Time: ' + $elm$core$String$fromInt(
-								A3($elm$core$Basics$clamp, 0, 60, model.timer))))))));
+			$MacCASOutreach$graphicsvg$GraphicSVG$move,
+			_Utils_Tuple2(700, 525),
+			A2(
+				$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+				$MacCASOutreach$graphicsvg$GraphicSVG$white,
+				$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
+					A2(
+						$MacCASOutreach$graphicsvg$GraphicSVG$size,
+						60,
+						$MacCASOutreach$graphicsvg$GraphicSVG$bold(
+							$MacCASOutreach$graphicsvg$GraphicSVG$text(
+								'Time: ' + $elm$core$String$fromInt(
+									A3($elm$core$Basics$clamp, 0, 60, model.timer)))))))));
 	var shoulders = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$filled,
 		$MacCASOutreach$graphicsvg$GraphicSVG$darkBlue,
 		A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 60, 30, 13));
 	var score = A2(
-		$MacCASOutreach$graphicsvg$GraphicSVG$move,
-		_Utils_Tuple2(-275, 525),
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
 		A2(
-			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			$MacCASOutreach$graphicsvg$GraphicSVG$darkRed,
-			$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
-				A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$size,
-					60,
-					$MacCASOutreach$graphicsvg$GraphicSVG$bold(
-						$MacCASOutreach$graphicsvg$GraphicSVG$text(
-							'Kill Count: ' + $elm$core$String$fromInt(model.score)))))));
-	var progSaved = ((model.poorBoy > 0) && (model.day > 0)) ? A2(
-		$MacCASOutreach$graphicsvg$GraphicSVG$makeTransparent,
-		model.poorBoy,
-		$MacCASOutreach$graphicsvg$GraphicSVG$group(
-			_List_fromArray(
-				[
+			$MacCASOutreach$graphicsvg$GraphicSVG$move,
+			_Utils_Tuple2(-275, 525),
+			A2(
+				$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+				$MacCASOutreach$graphicsvg$GraphicSVG$darkRed,
+				$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
 					A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$move,
-					_Utils_Tuple2(0, 150),
-					A3(
-						$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
-						$MacCASOutreach$graphicsvg$GraphicSVG$solid(8),
-						$MacCASOutreach$graphicsvg$GraphicSVG$darkRed,
+						$MacCASOutreach$graphicsvg$GraphicSVG$size,
+						60,
+						$MacCASOutreach$graphicsvg$GraphicSVG$bold(
+							$MacCASOutreach$graphicsvg$GraphicSVG$text(
+								'Kill Count: ' + $elm$core$String$fromInt(model.score))))))));
+	var progSaved = ((model.poorBoy > 0) && ((model.day > 0) && (model.timer < 3))) ? A2(
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
+		A2(
+			$MacCASOutreach$graphicsvg$GraphicSVG$makeTransparent,
+			model.poorBoy,
+			$MacCASOutreach$graphicsvg$GraphicSVG$group(
+				_List_fromArray(
+					[
 						A2(
-							$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-							$MacCASOutreach$graphicsvg$GraphicSVG$black,
+						$MacCASOutreach$graphicsvg$GraphicSVG$move,
+						_Utils_Tuple2(0, 150),
+						A3(
+							$MacCASOutreach$graphicsvg$GraphicSVG$addOutline,
+							$MacCASOutreach$graphicsvg$GraphicSVG$solid(8),
+							$MacCASOutreach$graphicsvg$GraphicSVG$darkRed,
 							A2(
-								$MacCASOutreach$graphicsvg$GraphicSVG$size,
-								200,
-								$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
-									A2(
-										$MacCASOutreach$graphicsvg$GraphicSVG$customFont,
-										'Ariel',
-										$MacCASOutreach$graphicsvg$GraphicSVG$centered(
-											$MacCASOutreach$graphicsvg$GraphicSVG$bold(
-												$MacCASOutreach$graphicsvg$GraphicSVG$text('Progress Saved')))))))))
-				]))) : $MacCASOutreach$graphicsvg$GraphicSVG$group(_List_Nil);
+								$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+								$MacCASOutreach$graphicsvg$GraphicSVG$black,
+								A2(
+									$MacCASOutreach$graphicsvg$GraphicSVG$size,
+									200,
+									$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
+										A2(
+											$MacCASOutreach$graphicsvg$GraphicSVG$customFont,
+											'Ariel',
+											$MacCASOutreach$graphicsvg$GraphicSVG$centered(
+												$MacCASOutreach$graphicsvg$GraphicSVG$bold(
+													$MacCASOutreach$graphicsvg$GraphicSVG$text('Progress Saved')))))))))
+					])))) : A2(
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
+		$MacCASOutreach$graphicsvg$GraphicSVG$group(_List_Nil));
 	var instruct2 = (!model.day) ? A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$makeTransparent,
 		((model.timer > 4) && (model.timer <= 8)) ? model.poorBoy : 0,
@@ -13345,48 +13360,57 @@ var $author$project$ZomZoms$gameScreen = function (model) {
 										$MacCASOutreach$graphicsvg$GraphicSVG$bold(
 											$MacCASOutreach$graphicsvg$GraphicSVG$text('Arrow Keys or WASD to Move'))))))))
 				]))) : $MacCASOutreach$graphicsvg$GraphicSVG$group(_List_Nil);
-	var health = A2(
-		$MacCASOutreach$graphicsvg$GraphicSVG$move,
-		_Utils_Tuple2(-600, 550),
+	var instructions = A2(
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
 		$MacCASOutreach$graphicsvg$GraphicSVG$group(
 			_List_fromArray(
-				[
-					A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$move,
-					_Utils_Tuple2((-225) * (1 - (model.heroHp / model.heroMaxHp)), 0),
-					A2(
-						$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-						A4($MacCASOutreach$graphicsvg$GraphicSVG$rgba, 0, 255, 0, model.heroHp / model.heroMaxHp),
-						A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450 * (model.heroHp / model.heroMaxHp), 50, 2))),
-					A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$move,
-					_Utils_Tuple2((-225) * (1 - (model.heroHp / model.heroMaxHp)), 0),
-					A2(
-						$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-						A4($MacCASOutreach$graphicsvg$GraphicSVG$rgba, 255, 0, 0, 1 - (model.heroHp / model.heroMaxHp)),
-						A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450 * (model.heroHp / model.heroMaxHp), 50, 2))),
-					A3(
-					$MacCASOutreach$graphicsvg$GraphicSVG$outlined,
-					$MacCASOutreach$graphicsvg$GraphicSVG$solid(4),
-					$MacCASOutreach$graphicsvg$GraphicSVG$black,
-					A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 50, 2)),
-					A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$move,
-					_Utils_Tuple2(-290, -30),
-					A2(
-						$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-						$MacCASOutreach$graphicsvg$GraphicSVG$red,
+				[instruct, instruct2])));
+	var health = A2(
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
+		A2(
+			$MacCASOutreach$graphicsvg$GraphicSVG$move,
+			_Utils_Tuple2(-600, 550),
+			$MacCASOutreach$graphicsvg$GraphicSVG$group(
+				_List_fromArray(
+					[
 						A2(
-							$MacCASOutreach$graphicsvg$GraphicSVG$size,
-							90,
-							$MacCASOutreach$graphicsvg$GraphicSVG$bold(
-								$MacCASOutreach$graphicsvg$GraphicSVG$alignLeft(
-									$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
-										A2(
-											$MacCASOutreach$graphicsvg$GraphicSVG$customFont,
-											'Ariel',
-											$MacCASOutreach$graphicsvg$GraphicSVG$text('+'))))))))
-				])));
+						$MacCASOutreach$graphicsvg$GraphicSVG$move,
+						_Utils_Tuple2((-225) * (1 - (model.heroHp / model.heroMaxHp)), 0),
+						A2(
+							$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+							A4($MacCASOutreach$graphicsvg$GraphicSVG$rgba, 0, 255, 0, model.heroHp / model.heroMaxHp),
+							A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450 * (model.heroHp / model.heroMaxHp), 50, 2))),
+						A2(
+						$MacCASOutreach$graphicsvg$GraphicSVG$move,
+						_Utils_Tuple2((-225) * (1 - (model.heroHp / model.heroMaxHp)), 0),
+						A2(
+							$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+							A4($MacCASOutreach$graphicsvg$GraphicSVG$rgba, 255, 0, 0, 1 - (model.heroHp / model.heroMaxHp)),
+							A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450 * (model.heroHp / model.heroMaxHp), 50, 2))),
+						A3(
+						$MacCASOutreach$graphicsvg$GraphicSVG$outlined,
+						$MacCASOutreach$graphicsvg$GraphicSVG$solid(4),
+						$MacCASOutreach$graphicsvg$GraphicSVG$black,
+						A3($MacCASOutreach$graphicsvg$GraphicSVG$roundedRect, 450, 50, 2)),
+						A2(
+						$MacCASOutreach$graphicsvg$GraphicSVG$move,
+						_Utils_Tuple2(-290, -30),
+						A2(
+							$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+							$MacCASOutreach$graphicsvg$GraphicSVG$red,
+							A2(
+								$MacCASOutreach$graphicsvg$GraphicSVG$size,
+								90,
+								$MacCASOutreach$graphicsvg$GraphicSVG$bold(
+									$MacCASOutreach$graphicsvg$GraphicSVG$alignLeft(
+										$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
+											A2(
+												$MacCASOutreach$graphicsvg$GraphicSVG$customFont,
+												'Ariel',
+												$MacCASOutreach$graphicsvg$GraphicSVG$text('+'))))))))
+					]))));
 	var header = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$move,
 		_Utils_Tuple2(0, 550),
@@ -13421,18 +13445,21 @@ var $author$project$ZomZoms$gameScreen = function (model) {
 					_List_fromArray(
 						[gun, shoulders, head])))));
 	var cash = A2(
-		$MacCASOutreach$graphicsvg$GraphicSVG$move,
-		_Utils_Tuple2(250, 525),
+		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
+		$author$project$ZomZoms$Direction,
 		A2(
-			$MacCASOutreach$graphicsvg$GraphicSVG$filled,
-			$MacCASOutreach$graphicsvg$GraphicSVG$darkYellow,
-			$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
-				A2(
-					$MacCASOutreach$graphicsvg$GraphicSVG$size,
-					60,
-					$MacCASOutreach$graphicsvg$GraphicSVG$bold(
-						$MacCASOutreach$graphicsvg$GraphicSVG$text(
-							'Cash: ' + $elm$core$String$fromInt(model.cash)))))));
+			$MacCASOutreach$graphicsvg$GraphicSVG$move,
+			_Utils_Tuple2(250, 525),
+			A2(
+				$MacCASOutreach$graphicsvg$GraphicSVG$filled,
+				$MacCASOutreach$graphicsvg$GraphicSVG$darkYellow,
+				$MacCASOutreach$graphicsvg$GraphicSVG$sansserif(
+					A2(
+						$MacCASOutreach$graphicsvg$GraphicSVG$size,
+						60,
+						$MacCASOutreach$graphicsvg$GraphicSVG$bold(
+							$MacCASOutreach$graphicsvg$GraphicSVG$text(
+								'Cash: ' + $elm$core$String$fromInt(model.cash))))))));
 	var back = A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$filled,
 		$MacCASOutreach$graphicsvg$GraphicSVG$lightGrey,
@@ -13466,8 +13493,7 @@ var $author$project$ZomZoms$gameScreen = function (model) {
 			score,
 			health,
 			cash,
-			instruct,
-			instruct2,
+			instructions,
 			$author$project$ZomZoms$renderBullets(model.gun),
 			hero,
 			$author$project$ZomZoms$renderZombies(model.army),

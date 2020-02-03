@@ -120,7 +120,7 @@ type alias UserInfo =
 
 type alias Highscores =
     { n1 : String
- , s1 : Int, d1 : Int
+    , s1 : Int, d1 : Int
     , n2 : String, s2 : Int, d2 : Int
     , n3 : String, s3 : Int, d3 : Int
     , n4 : String, s4 : Int, d4 : Int
@@ -148,6 +148,7 @@ type alias Model =
     , gun : Gun
     , army : Army
     , spawn : Bool
+    , bSpawn : Bool
     , cash : Int
     , poorBoy : Float
     , heroX : Float
@@ -186,6 +187,7 @@ init flags url key =
                 , gun = []
                 , army = []
                 , spawn = False
+                , bSpawn = False
                 , cash = 20
                 , poorBoy = 3
                 , heroX = 0
@@ -576,8 +578,8 @@ zombieGen model =                               --The positions are assigned bas
             , x = x
             , y = y
             , colour = green
-            , hp = toFloat(10 + 5*(model.day - 1))
-            , maxHp = toFloat(10 + 5*(model.day - 1))
+            , hp = toFloat(10 + 5*model.day )
+            , maxHp = toFloat(10 + 5*model.day )
             , size = 20
             , dmg = toFloat(3 + model.day - 1)
             , dir =  atan2 y x
@@ -888,17 +890,24 @@ update msg model = case msg of
                                 , score = score
                                 , poorBoy = allRagsNoRiches
                                 }
-                                , if ( model.timer == 2 || modBy (clamp 1 6 (round(4 - toFloat(model.day)/5))) model.timer == 0 ) && model.spawn   --Spawn a zombie once per time interval
-                                        then Random.generate NewZombie ( zombieGen model ) 
-                                else if model.timer >= 44 && model.timer < 45 && model.spawn                           --Boss Zombie spawn
+                                , if model.bSpawn                           --Boss Zombie spawn
                                         then Random.generate NewZombie ( bossZombieGen model )
+                                else if ( model.timer == 2 || modBy (clamp 1 6 (round(4 - toFloat(model.day)/5))) model.timer == 0 ) && model.spawn   --Spawn a zombie once per time interval
+                                        then Random.generate NewZombie ( zombieGen model ) 
                                 else if model.phase == Shop && model.phase /= phase && phase == Start    --Save stats and score upon leaving the shop
                                         then Cmd.batch [ saveStats model.upgrades, saveScore model.userInfo ]
                                 else Cmd.none
                              )
                     else update Death ( youDied model )   --if the hero's hp drops to 0, end the game and reset the stats to init values
                 
-                Tock _                  -> ( { model | timer = model.timer + 1, poorBoy = if model.timer == 0 || model.timer == 4 then 3 else model.poorBoy, spawn = True }, Cmd.none ) --increment the timer and reset the spawn enabler once per second
+                Tock _                  -> ( { model | timer = model.timer + 1
+                                                     , poorBoy = if model.timer == 0 || model.timer == 4 then 3 else model.poorBoy
+                                                     , spawn = True
+                                                     , bSpawn = if model.timer == 45 && model.day < 5 then True 
+                                                                else if (model.timer == 45 || model.timer == 50) && model.day >= 5 && model.day < 10 then True 
+                                                                else if (model.timer == 40 || model.timer == 45 || model.timer == 50 ) && model.day >= 10 && model.day < 15 then True 
+                                                                else if (model.timer == 35 || model.timer == 40 || model.timer == 45 || model.timer == 50) && model.day >= 15 then True 
+                                                                else model.bSpawn }, Cmd.none ) --increment the timer and reset the spawn enabler once per second
 
                 Play                    -> ( { model | day = model.day + 1, phase = Start, timer = 0, army = [], heroHp = model.heroMaxHp }, Cmd.none )
                 
@@ -910,7 +919,7 @@ update msg model = case msg of
                 
                 Direction (dirX, dirY)  -> ( { model | heroDir = atan2 (dirY-model.heroY) (dirX-model.heroX) }, Cmd.none )
                 
-                NewZombie newZombie     -> ( { model | army = [newZombie] ++ model.army, spawn = False }, Cmd.none)
+                NewZombie newZombie     -> ( { model | army = [newZombie] ++ model.army, spawn = False, bSpawn = False }, Cmd.none)
                 
                 Shoot _ -> let newBullets = fire model 
                            in if model.reload == 0 
@@ -923,10 +932,10 @@ update msg model = case msg of
 
                 SpeedUp     -> let stats = model.upgrades
                                    oldStat = stats.speed
-                                   newSpeed = oldStat.value + 1
+                                   newSpeed = oldStat.value + 0.5
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | heroSpeed = newSpeed
                                                             , cash = model.cash - oldStat.cost
@@ -939,7 +948,7 @@ update msg model = case msg of
                                    newArmor = oldStat.value + 100
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | heroMaxHp = newArmor
                                                             , cash = model.cash - oldStat.cost
@@ -952,7 +961,7 @@ update msg model = case msg of
                                    newMuzzleV = oldStat.value + 5
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | muzzleV = newMuzzleV
                                                             , cash = model.cash - oldStat.cost
@@ -965,7 +974,7 @@ update msg model = case msg of
                                    newDamage = oldStat.value + 3
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | damage = newDamage
                                                             , cash = model.cash - oldStat.cost
@@ -978,7 +987,7 @@ update msg model = case msg of
                                    newFireRate = oldStat.value - 1/30
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | fireRate = newFireRate
                                                             , cash = model.cash - oldStat.cost
@@ -991,7 +1000,7 @@ update msg model = case msg of
                                    newSpread = oldStat.value + 1
                                    newProgress = oldStat.progress + 0.1
                                    cost = oldStat.cost*2
-                                   allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                   allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                         (True, True)    -> ({ model | spread = round(newSpread)
                                                             , cash = model.cash - oldStat.cost
@@ -1004,7 +1013,7 @@ update msg model = case msg of
                                        newPenetration = oldStat.value + 1
                                        newProgress = oldStat.progress + 0.1
                                        cost = oldStat.cost*2
-                                       allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                       allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                    in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                             (True, True)    -> ({ model | penetration = round(newPenetration)
                                                                 , cash = model.cash - oldStat.cost
@@ -1017,7 +1026,7 @@ update msg model = case msg of
                                        newHealthRegen = oldStat.value + 1/120
                                        newProgress = oldStat.progress + 0.1
                                        cost = oldStat.cost*2
-                                       allRagsNoRiches = if oldStat.cost > model.cash then 2.5 else model.poorBoy
+                                       allRagsNoRiches = if oldStat.cost > model.cash then 3 else model.poorBoy
                                    in case (canBuy model.cash oldStat.cost oldStat.progress) of
                                             (True, True)    -> ({ model | healthRegen = newHealthRegen
                                                                 , cash = model.cash - oldStat.cost
@@ -1218,9 +1227,7 @@ titleScreen model = let title = "ZomZom"
                         shapes = [ border
                                     , statusBar
                                     , welcome
-                                    --, playButton
                                     , form
-                                    --, auth
                                     ]
         
         
@@ -1370,13 +1377,14 @@ gameScreen model = let
                                  , score
                                  , health
                                  , cash
-                                 , instruct
-                                 , instruct2
+                                 , instructions
                                  , renderBullets model.gun
                                  , hero
                                  , renderZombies model.army
                                  , progSaved
                                  ] 
+
+                        instructions = group[ instruct, instruct2] |> notifyMouseMoveAt Direction 
 
                         instruct = if model.day == 0
                                     then group [
@@ -1421,7 +1429,7 @@ gameScreen model = let
                         back = rect 1920 1200 
                             |> filled lightGrey
                         
-                        progSaved = if model.poorBoy > 0 && model.day > 0
+                        progSaved = if model.poorBoy > 0 && model.day > 0 && model.timer <= 4
                                         then group [        --Progress Saved displays first and then fades
                                             text("Progress Saved")
                                                 |> bold
@@ -1431,9 +1439,10 @@ gameScreen model = let
                                                 |> size 200
                                                 |> filled black
                                                 |> addOutline (solid 8) darkRed
-                                                |> move (0, 150) ]
-                                            |> makeTransparent model.poorBoy
-                                        else group []
+                                                |> move (0, 150) 
+                                                ] |> makeTransparent model.poorBoy
+                                                  |> notifyMouseMoveAt Direction
+                                        else group [] |> notifyMouseMoveAt Direction
 
 
                         timer = text ("Time: " ++ String.fromInt (clamp 0 60 model.timer))
@@ -1442,18 +1451,21 @@ gameScreen model = let
                             |> sansserif
                             |> filled white
                             |> move ( 700, 525 )
+                            |> notifyMouseMoveAt Direction
                         score = text ("Kill Count: " ++ String.fromInt(model.score))
                             |> bold
                             |> size 60
                             |> sansserif
                             |> filled darkRed
                             |> move ( -275, 525 ) 
+                            |> notifyMouseMoveAt Direction
                         cash = text ("Cash: " ++ String.fromInt(model.cash))
                             |> bold
                             |> size 60
                             |> sansserif
                             |> filled darkYellow
                             |> move ( 250, 525 ) 
+                            |> notifyMouseMoveAt Direction
                         
                         health = group [ roundedRect (450*(model.heroHp/model.heroMaxHp)) 50 2
                                            |> filled (rgba 0 255 0 (model.heroHp/model.heroMaxHp))
@@ -1472,6 +1484,7 @@ gameScreen model = let
                                            |> filled red
                                            |> move (-290, -30)
                                        ] |> move (-600,550)
+                                         |> notifyMouseMoveAt Direction
 
                         hero = group [ gun, shoulders, head ] 
                                      |> rotate ( model.heroDir - pi/2 )

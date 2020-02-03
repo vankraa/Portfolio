@@ -1,14 +1,14 @@
-# Project 03
+# ZomZoms
 
 A game made in elm is linked to a django server app in order to save scores, progress and stats to a SQL table.
 Once the user signs up to the server, they will have access to their own stats. If the username and password
 form is not filled the app will continue in offline mode and no progress will be saved upon exiting the game.
 
-The game is hosted on https://mac1xa3.ca/u/vankraa/Project03/ZomZoms/project03.html
+The game is hosted on http://ugweb.cas.mcmaster.ca/~vankraa/ZomZoms/PlayZomZoms.html
 
-The server root url is https://mac1xa3.ca/e/vankraa/zomdataapp/ including all the urls in the app folder
+The server root url is temporarily disabled, including all the urls in the app folder
 
-## ZomZoms Game
+## Game
 -----
 
 -----
@@ -29,7 +29,7 @@ main = appWithTick Tick
 
 -----
 ### **Model**
-
+dddwwwwwww
 Variable | Type | Use
 ---|---|---
 name | String | The player's username to be sent to the server
@@ -47,6 +47,7 @@ hScores | Highscores | Type alias Highscores has a record of the top 10 username
 gun | Gun | Contains a list of bullets created with the shoot function
 army | Army | Contains a list of the zombies spawned
 spawn | Bool | A variable to switch on and off to control the number of zombies spawned on every call of the **Tick** message
+bSpawn | Bool | A variable to switch on and off to control the boss zombie spawn
 cash | Int | Player's cash collected
 poorBoy | Float | A variable used to control the transparency of a message on the screen to add flare and pzaz to the text
 heroX | Float | Player's horizontal position on the screen
