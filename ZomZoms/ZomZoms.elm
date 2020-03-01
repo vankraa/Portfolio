@@ -600,8 +600,8 @@ bossZombieGen model =                                   --He's the first member 
             , x = x
             , y = y
             , colour = darkGreen
-            , hp = toFloat(40 + 5*(model.day - 1))
-            , maxHp = toFloat(40 + 5*(model.day - 1))
+            , hp = toFloat(40 + 10*(model.day - 1))
+            , maxHp = toFloat(40 + 10*(model.day - 1))
             , size = 40
             , dmg = toFloat(10 + 2*model.day - 1)
             , dir = (atan2 y x)
@@ -892,7 +892,7 @@ update msg model = case msg of
                                 }
                                 , if model.bSpawn                           --Boss Zombie spawn
                                         then Random.generate NewZombie ( bossZombieGen model )
-                                else if ( model.timer == 2 || modBy (clamp 1 6 (round(4 - toFloat(model.day)/5))) model.timer == 0 ) && model.spawn   --Spawn a zombie once per time interval
+                                else if ( model.timer == 2 || modBy (clamp 1 6 (round(4 - toFloat(model.day)/4))) model.timer == 0 ) && model.spawn   --Spawn a zombie once per time interval
                                         then Random.generate NewZombie ( zombieGen model ) 
                                 else if model.phase == Shop && model.phase /= phase && phase == Start    --Save stats and score upon leaving the shop
                                         then Cmd.batch [ saveStats model.upgrades, saveScore model.userInfo ]

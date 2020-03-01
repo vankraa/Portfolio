@@ -9804,9 +9804,9 @@ var $author$project$ZomZoms$bossZombieGen = function (model) {
 					colour: $MacCASOutreach$graphicsvg$GraphicSVG$darkGreen,
 					dir: A2($elm$core$Basics$atan2, y, x),
 					dmg: (10 + (2 * model.day)) - 1,
-					hp: 40 + (5 * (model.day - 1)),
+					hp: 40 + (10 * (model.day - 1)),
 					isHit: 0,
-					maxHp: 40 + (5 * (model.day - 1)),
+					maxHp: 40 + (10 * (model.day - 1)),
 					size: 40,
 					speed: A3($elm$core$Basics$clamp, 0, 8, s + ((model.day - 1) / 10)),
 					value: 10 + (5 * (model.day - 1)),
@@ -11131,7 +11131,7 @@ var $author$project$ZomZoms$update = F2(
 									$elm$core$Basics$clamp,
 									1,
 									6,
-									$elm$core$Basics$round(4 - (model.day / 5))),
+									$elm$core$Basics$round(4 - (model.day / 4))),
 								model.timer))) && model.spawn) ? A2(
 								$elm$random$Random$generate,
 								$author$project$ZomZoms$NewZombie,
@@ -13281,7 +13281,7 @@ var $author$project$ZomZoms$gameScreen = function (model) {
 						$MacCASOutreach$graphicsvg$GraphicSVG$bold(
 							$MacCASOutreach$graphicsvg$GraphicSVG$text(
 								'Kill Count: ' + $elm$core$String$fromInt(model.score))))))));
-	var progSaved = ((model.poorBoy > 0) && ((model.day > 0) && (model.timer < 3))) ? A2(
+	var progSaved = ((model.poorBoy > 0) && ((model.day > 0) && (model.timer <= 4))) ? A2(
 		$MacCASOutreach$graphicsvg$GraphicSVG$notifyMouseMoveAt,
 		$author$project$ZomZoms$Direction,
 		A2(
